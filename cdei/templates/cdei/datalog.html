@@ -52,10 +52,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">DashBoard</a>
+                        <a class="nav-link" href="#">DashBoard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">DataLog</a>
+                        <a class="nav-link active" href="#">DataLog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Manage Data</a>
@@ -74,96 +74,22 @@
 
     <main role="main" class="container">
         <div class="row dash-margin">
-            <div class="col dash-margin dash-box dash-shadow">
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col">Words</div>
-                        <div class="w-50"></div>
-                        <div class="col chart-container">
-                            <canvas id="firstChart"></canvas>
-                        </div>
-                    </div>
+            <div class="col-lg-5 dash-box dash-margin dash-shadow">1</div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-12 dash-box dash-margin dash-shadow">2</div>
+                    <div class="col-lg-12 dash-box dash-margin dash-shadow">3</div>
                 </div>
-
-                <script>
-                    var ctx = document.getElementById('firstChart').getContext('2d');
-
-                    var data = {
-                        datasets: [{
-                            data: [10, 20, 30],
-                            backgroundColor: ['rgba(255, 99, 132, 0.8)', 'rgba(54, 162, 235, 0.8)', 'rgba(64, 255, 132, 0.8)']
-                        }],
-
-                        // These labels appear in the legend and in the tooltips when hovering different arcs
-                        labels: [
-                            'Red',
-                            'Blue',
-                            'Green'
-                        ]
-                    };
-
-                    var myDoughnutChart = new Chart(ctx, {
-                        type: 'doughnut',
-                        data: data
-                    });
-                </script>
-
-            </div>
-            <div class=" col dash-margin dash-box dash-shadow">
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col">More Words</div>
-                        <div class="w-50"></div>
-                        <div class="col chart-container">
-                            <canvas id="secondChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-
-                <script>
-                    var ctx = document.getElementById('secondChart').getContext('2d');
-
-                    var data = {
-                        labels: ['Red', 'Blue', 'Green'],
-                        datasets: [{
-                            label: 'Example bar',
-                            data: [10, 20, 30],
-                            backgroundColor: ['rgba(255, 99, 132, 0.8)', 'rgba(54, 162, 235, 0.8)', 'rgba(64, 255, 132, 0.8)']
-                        }]
-                    };
-
-                    var myBarChart = new Chart(ctx, {
-                        type: 'bar',
-                        data: data,
-                        options: {
-                            scales: {
-                                yAxes: [{
-                                    ticks: {
-                                        beginAtZero: true
-                                    }
-                                }]
-                            }
-                        }
-                    });
-                </script>
-            </div>
-        </div>
-        <div class=" row dash-margin">
-            <div class="col dash-margin dash-box dash-shadow">
-                Hey look a chart
-                <img src="./../../static/cdei/images/demo-chart-3.png">
-            </div>
-            <div class=" col dash-margin dash-box dash-shadow">
-                Hey look a chart
-                <img src="./../../static/cdei/images/demo-chart-4.png">
             </div>
         </div>
         <div class="row dash-margin">
             <div class="col dash-margin dash-box dash-shadow">
                 Hey look a chart
                 <img src="./../../static/cdei/images/demo-chart-5.png">
+            </div>
+            <div class=" col dash-margin dash-box dash-shadow">
+                Hey look a chart
+                <img src="./../../static/cdei/images/demo-chart-6.png">
             </div>
             <div class=" col dash-margin dash-box dash-shadow">
                 Hey look a chart
