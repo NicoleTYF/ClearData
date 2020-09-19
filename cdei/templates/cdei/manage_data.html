@@ -19,7 +19,7 @@
         crossorigin="anonymous" />
 
     <!-- My own style sheets -->
-    <link rel="stylesheet" href="./../../static/cdei/css/dashboard.css">
+    <link rel="stylesheet" href="./../../static/cdei/css/manage_data.css">
 
     <!-- Include charts.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
@@ -34,6 +34,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"
         integrity="sha512-QEiC894KVkN9Tsoi6+mKf8HaCLJvyA6QIRzY5KrfINXYuP9NxdIkRQhGq3BZi0J4I7V5SidGM3XUQ5wFiMDuWg=="
         crossorigin="anonymous"></script>
+
+    <!-- My own script -->
+    <script type="text/javascript" src="./../../static/cdei/js/manage_data.js"></script>
 </head>
 
 <body>
@@ -52,13 +55,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">DashBoard</a>
+                        <a class="nav-link" href="#">DashBoard</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">DataLog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Manage Data</a>
+                        <a class="nav-link active" href="#">Manage Data</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Settings</a>
@@ -77,41 +80,35 @@
             <div class="col dash-margin dash-box dash-shadow">
                 Location requests
                 <table class="table" style="margin-top:1em;">
-                    <thead class="thead-dark">
+                    <thead style="color: white; background-color: #00295f;">
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
+                            <th scope="col">#Search Id</th>
+                            <th scope="col">Date Queried</th>
+                            <th scope="col">DOB Start</th>
+                            <th scope="col">DOB End</th>
+                            <th scope="col">Regions</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                        <tr onmouseover="ChangeColor(this, true);" onmouseout="ChangeColor(this, false);"
+                            onclick="DoNav('http://google.com');">
+                            <th scope="row">#23948</th>
+                            <td>23/1/2020</td>
+                            <td>1/1/1980</td>
+                            <td>1/1/2000</td>
+                            <td>Argentina, ...</td>
                         </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
+
+                        <tr onmouseover="ChangeColor(this, true);" onmouseout="ChangeColor(this, false);"
+                            onclick="DoNav('http://google.com');">
+                            <th scope="row">#23949</th>
+                            <td>18/1/2020</td>
+                            <td>1/1/1960</td>
+                            <td>1/1/1970</td>
+                            <td>England, ...</td>
                         </tr>
                     </tbody>
                 </table>
-            </div>
-        </div>
-        <div class="row dash-margin">
-            <div class="col dash-margin dash-box dash-shadow">
-                Hey look a chart
-                <img src="./../../static/cdei/images/demo-chart-5.png">
             </div>
         </div>
     </main>
