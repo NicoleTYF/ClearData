@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"
+        integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css"
+        integrity="sha512-SUJFImtiT87gVCOXl3aGC00zfDl6ggYAw5+oheJvRJ8KBXZrr/TMISSdVJ5bBarbQDRC2pR5Kto3xTR0kpZInA=="
+        crossorigin="anonymous" />
+
+    <!-- My own style sheets -->
+    <link rel="stylesheet" href="./../../static/cdei/css/dashboard.css">
+
+    <!-- Include charts.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+        integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"
+        integrity="sha512-G8JE1Xbr0egZE5gNGyUm1fF764iHVfRXshIoUWCTPAbKkkItp/6qal5YAHXrxEu4HNfPTQs6HOu3D5vCGS1j3w=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"
+        integrity="sha512-vBmx0N/uQOXznm/Nbkp7h0P1RfLSj0HQrFSzV8m7rOGyj30fYAOKHYvCNez+yM8IrfnW0TCodDEjRqf6fodf/Q=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"
+        integrity="sha512-QEiC894KVkN9Tsoi6+mKf8HaCLJvyA6QIRzY5KrfINXYuP9NxdIkRQhGq3BZi0J4I7V5SidGM3XUQ5wFiMDuWg=="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg navbar-dark" style=" background-color: #00295f;">
+
+            <a class="navbar-brand" href="#">
+                <img src="./../../static/cdei/images/logo.png" style="width: 60px;" />
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">DashBoard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">DataLog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Manage Data</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Settings</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-brand">
+                Profile Name
+            </div>
+            <a href="#" class="btn btn-outline-light">Sign-Out</a>
+        </nav>
+    </header>
+
+    <main role="main" class="container">
+        <div class="row dash-margin">
+            <div class="col dash-margin dash-box dash-shadow">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col">Data Types</div>
+                        <div class="w-50"></div>
+                        <div class="col chart-container">
+                            <canvas id="firstChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" col dash-margin dash-box dash-shadow">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col">Data Collection over the past 6 months</div>
+                        <div class="w-100"></div>
+                        <div class="col chart-container">
+                            <canvas id="secondChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" row dash-margin">
+            <div class="col dash-margin dash-box dash-shadow">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">User Subscriptions</div>
+                        <div class="w-50"></div>
+                        <div class="col chart-container">
+                            <canvas id="thirdChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" col dash-margin dash-box dash-shadow">
+                Hey look a chart
+                <img src="./../../static/cdei/images/demo-chart-4.png">
+            </div>
+        </div>
+        <div class="row dash-margin">
+            <div class="col dash-margin dash-box dash-shadow">
+                Hey look a chart
+                <img src="./../../static/cdei/images/demo-chart-5.png">
+            </div>
+            <div class=" col dash-margin dash-box dash-shadow">
+                Hey look a chart
+                <img src="./../../static/cdei/images/demo-chart-6.png">
+            </div>
+        </div>
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src=" https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+        var doughnut_data = {
+            datasets: [{
+                data: [10, 20, 30],
+                backgroundColor: ['#5b719b', '#5b9aa3', 'rgb(250, 200, 15)']
+            }],
+
+            // These labels appear in the legend and in the tooltips when hovering different arcs
+            labels: [
+                'Location',
+                'Web Searches',
+                'Purchases'
+            ]
+        };
+
+        var doughnut_config = {
+            type: 'doughnut',
+            data: doughnut_data,
+            options: {
+                legend: {
+                    position: "right",
+                    align: "middle"
+                },
+            }
+        };
+
+        var bar_data = {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+            datasets: [{
+                label: 'Example bar',
+                data: [3.5, 5.5, 4.1, 7.8, 6.9, 5.7],
+                backgroundColor: '#5b719b'
+            }]
+        };
+
+        var bar_config = {
+            type: 'bar',
+            data: bar_data,
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            callback: function (value, index, values) {
+                                return value + ' GB';
+                            }
+                        },
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Data Consumption'
+                        }
+                    }]
+                },
+                // This helps remove the pesky legend at the top
+                legend: {
+                    display: false
+                },
+                tooltips: {
+                    callbacks: {
+                        label: function (tooltipItem) {
+                            return tooltipItem.yLabel;
+                        }
+                    }
+                }
+            }
+        };
+
+        var line_config = {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [{
+                    label: 'My First dataset',
+                    backgroundColor: 'rgb(250, 200, 15)',
+                    borderColor: 'rgb(250, 200, 15)',
+                    data: [11, 12, 16, 13, 15, 18, 16],
+                    fill: false,
+                }, {
+                    label: 'My Second dataset',
+                    fill: false,
+                    backgroundColor: '#5b9aa3',
+                    borderColor: '#5b9aa3',
+                    data: [6, 9, 8, 7, 10, 9, 12],
+                }]
+            },
+            options: {
+                responsive: true,
+                title: {
+                    display: false,
+                    text: 'Chart.js Line Chart'
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+                scales: {
+                    x: {
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Month'
+                        }
+                    },
+                    y: {
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Value'
+                        }
+                    }
+                }
+            }
+        };
+
+        window.onload = function () {
+            var doughnut_canvas = document.getElementById('firstChart').getContext('2d');
+            window.my_doughnut = new Chart(doughnut_canvas, doughnut_config);
+
+            var bar_canvas = document.getElementById('secondChart').getContext('2d');
+            window.my_bar = new Chart(bar_canvas, bar_config);
+
+            var line_canvas = document.getElementById('thirdChart').getContext('2d');
+            window.my_canvas = new Chart(line_canvas, line_config);
+        };
+    </script>
+</body>
+
+</html>
