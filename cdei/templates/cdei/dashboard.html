@@ -19,7 +19,7 @@
         crossorigin="anonymous" />
 
     <!-- My own style sheets -->
-    <link rel="stylesheet" href="./../../static/cdei/css/bs_dashboard.css">
+    <link rel="stylesheet" href="./../../static/cdei/css/dashboard.css">
 
     <!-- Include charts.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
@@ -38,10 +38,21 @@
 
 <body>
     <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
-        <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+        <div class="form-control form-control-dark w-100">
+            <a href="#">
+                <img src="./../../static/cdei/images/logo_text.png" style="height: 50px;" />
+            </a>
+        </div>
+        <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
         <ul class="navbar-nav px-3">
-            <li class="nav-item text-nowrap">
+            <li class="nav-item" style="color: white; font-size: 2em;">
                 Alex
+            </li>
+        </ul>
+        <ul class="navbar-nav px-3">
+            <li class="nav-item" style="color: white;">
+                <img src="./../../static/cdei/images/default_profile_pic.jpg"
+                    style="width: 60px; border-radius: 50%;" />
             </li>
         </ul>
     </nav>
