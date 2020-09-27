@@ -8,9 +8,35 @@ body {
   vertical-align: text-bottom;
 }
 
+body {
+    background-image: url("./../images/bg_web.png");
+}
+
 /*
  * Sidebar
  */
+
+ .main-title {
+    text-decoration: none;
+    padding: 0.5em;
+    color: white;
+ }
+
+ .date-title {
+     color: bisque;
+ }
+
+ .dash-box {
+    background-color: #ffffff;
+    font-size: large;
+    padding: 2em;
+    border-radius: 5px;
+}
+
+.sub-title {
+    color: white;
+    border-bottom: 3px dotted bisque;
+}
 
 .sidebar {
   position: fixed;
