@@ -33,6 +33,10 @@ body {
     border-radius: 5px;
 }
 
+.dash-margin {
+    margin: 1em;
+}
+
 .sub-title {
     color: white;
     border-bottom: 3px dotted bisque;
