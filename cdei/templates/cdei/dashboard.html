@@ -82,22 +82,14 @@
 
                             <div class="dash-box dash-shadow">
                                 <canvas class="my-4" id="scatter_summary" width="900" height="150"></canvas>
-                                <div class="container" id="scatter_data">
-                                    <div class="row">
-                                        <div class="col">
-                                            Hi
-                                        </div>
-                                        <div class="col">
-                                            Hi
-                                        </div>
-                                        <div class="col">
-                                            Hi
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Probably a bad idea but using br, but it's gonna work for
+                    now so ¯\_(ツ)_/¯ -->
+                    <br>
+                    <br>
 
                     <div class="row">
                         <div class="col">
@@ -112,19 +104,79 @@
                                             class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3">
                                             <div class="d-flex align-items-center">
                                                 <h3 class="sub-title">New Opportunites</h3>
+                                                <button type="button" class="btn btn-danger opportunity-remove-all">
+                                                    <img src="./../../static/cdei/images/ic_trash.png"
+                                                        style="height: 17px;" />
+                                                    Delete All
+                                                </button>
                                             </div>
                                         </div>
 
+                                        <!-- This container will hold all of the opportunity cards -->
                                         <div class="container">
+
+                                            <!-- Each opportunity card is placed on new row of the container -->
                                             <div class="row">
-                                                <div class="card border-light mb-3 opportunity-card">
-                                                    <div class="card-header opportunity-card-header">Header</div>
+                                                <!-- Create a new card for each opportunity -->
+                                                <div class="card mb-3 opportunity-card">
+                                                    <div class="card-header opportunity-card-header">
+                                                        Silk Road
+                                                        <button type="button"
+                                                            class="btn btn-outline-secondary opportunity-close-button">&times;</button>
+                                                    </div>
                                                     <div class="card-body">
-                                                        <p class="card-text">Some quick example text to build on the
-                                                            card title and make up the bulk of the card's content.</p>
+                                                        <p class="card-text">
+                                                            <a href="#" class="badge badge-warning">Credit Card</a>
+                                                            <a href="#" class="badge badge-warning">Web Searches</a>
+                                                            <a href="#" class="badge badge-warning">Location</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="card mb-3 opportunity-card">
+                                                    <div class="card-header opportunity-card-header">
+                                                        Safeway
+                                                        <button type="button"
+                                                            class="btn btn-outline-secondary opportunity-close-button">&times;</button>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <p class="card-text">
+                                                            <a href="#" class="badge badge-warning">Credit Card</a>
+                                                            <a href="#" class="badge badge-warning">Location</a>
+                                                            <a href="#" class="badge badge-warning">Health</a>
+                                                            <a href="#" class="badge badge-warning">Check Ins</a>
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
+
+                                            <div class="row">
+                                                <div class="card mb-3 opportunity-card">
+                                                    <div class="card-header opportunity-card-header">
+                                                        Lehman Brothers
+                                                        <button type="button"
+                                                            class="btn btn-outline-secondary opportunity-close-button">&times;</button>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <p class="card-text">
+                                                            <a href="#" class="badge badge-warning">Credit Card</a>
+                                                            <a href="#" class="badge badge-warning">Location</a>
+                                                            <a href="#" class="badge badge-warning">Transaction
+                                                                Amount</a>
+                                                            <a href="#" class="badge badge-warning">Transaction
+                                                                Category</a>
+                                                            <a href="#" class="badge badge-warning">Transaction
+                                                                History</a>
+                                                            <a href="#" class="badge badge-warning">Purchases</a>
+                                                            <a href="#" class="badge badge-warning">Mortgage</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -173,6 +225,7 @@
                                                 </div>
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>

@@ -48,13 +48,23 @@ h3.sub-title {
 }
 
 .opportunity-card {
+    width: 100%;
+
     border-radius: 0%;
 
-    border-bottom-color: rgb(0, 0, 0);
+    border-style: solid;
+
+    border-bottom-color: lightgray;
     border-bottom-width: 5px;
 
-    border-left: #999;
-    border-left-width: 2em;
+    border-left-color: lightgray;
+    border-left-width: medium;
+}
+
+.opportunity-remove-all {
+    border-radius: 0%;
+    right: 5%;
+    position: absolute;
 }
 
 .opportunity-card-header {
@@ -62,6 +72,11 @@ h3.sub-title {
     border: none;
     font-size: large;
     font-weight: bold;
+}
+
+.opportunity-close-button {
+    right: 5%;
+    position: absolute;
 }
 
 .sidebar {
