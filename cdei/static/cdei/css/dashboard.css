@@ -10,6 +10,7 @@ body {
 
 body {
     background-image: url("./../images/bg_web.png");
+    background-size: cover;
 }
 
 /*
@@ -37,9 +38,30 @@ body {
     margin: 1em;
 }
 
-.sub-title {
+h2.sub-title {
     color: white;
     border-bottom: 3px dotted bisque;
+}
+
+h3.sub-title {
+    color: white;
+}
+
+.opportunity-card {
+    border-radius: 0%;
+
+    border-bottom-color: rgb(0, 0, 0);
+    border-bottom-width: 5px;
+
+    border-left: #999;
+    border-left-width: 2em;
+}
+
+.opportunity-card-header {
+    background-color: #ffffff;
+    border: none;
+    font-size: large;
+    font-weight: bold;
 }
 
 .sidebar {

@@ -70,7 +70,7 @@
 
             <main role="main" class="col-md-9 col-lg-10 pt-3 px-4">
                 <div class="container">
-                    <div class="row dash-margin">
+                    <div class="row">
                         <div class="col">
                             <div
                                 class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3">
@@ -80,9 +80,9 @@
                                 </div>
                             </div>
 
-                            <div class="dash-margin dash-box dash-shadow">
+                            <div class="dash-box dash-shadow">
                                 <canvas class="my-4" id="scatter_summary" width="900" height="150"></canvas>
-                                <div class="container">
+                                <div class="container" id="scatter_data">
                                     <div class="row">
                                         <div class="col">
                                             Hi
@@ -101,24 +101,79 @@
 
                     <div class="row">
                         <div class="col">
-                            <div
-                                class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3">
-                                <div class="d-flex flex-wrap flex-md-nowrap align-items-center pb-2 mb-3">
-                                    <h2 class="sub-title">Data Earnings</h2>
-                                    <img src="./../../static/cdei/images/ic_arrow.png" style="height: 30px;" />
+                            <div class="container">
+                                <div class="row">
+                                    <!-- The col-6 will make this column bigger -->
+                                    <div class="col-6 dash-box dash-shadow">
+                                        1
+                                    </div>
+                                    <div class="col">
+                                        <div
+                                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3">
+                                            <div class="d-flex align-items-center">
+                                                <h3 class="sub-title">New Opportunites</h3>
+                                            </div>
+                                        </div>
+
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="card border-light mb-3 opportunity-card">
+                                                    <div class="card-header opportunity-card-header">Header</div>
+                                                    <div class="card-body">
+                                                        <p class="card-text">Some quick example text to build on the
+                                                            card title and make up the bulk of the card's content.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-5">
-                                        <div class="row" style="margin-right: 1em;">
-                                            <div class="col-lg-12 dash-box dash-margin dash-shadow">
+                                        <div
+                                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3">
+                                            <div class="d-flex align-items-center">
+                                                <h2 class="sub-title">Data Usage</h2>
+                                                <img src="./../../static/cdei/images/ic_arrow.png"
+                                                    style="height: 30px;" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 dash-box dash-shadow">
                                                 <canvas id="firstChart"></canvas>
                                             </div>
-                                            <div class="col-lg-12 dash-box dash-margin dash-shadow">3</div>
+                                            <div class="col-lg-12 dash-box dash-shadow">3</div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 dash-box dash-margin dash-shadow">1</div>
+                                    <div class="col-lg-6">
+                                        <div
+                                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3">
+                                            <div class="d-flex align-items-center">
+                                                <h3 class="sub-title">New Opportunites</h3>
+                                            </div>
+                                        </div>
+
+                                        <!-- Create a container to store each opportunity tab -->
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="card border-light mb-3">
+                                                    <div class="card-header">Header</div>
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Light card title</h5>
+                                                        <p class="card-text">Some quick example text to build on the
+                                                            card title and make up the bulk of the card's content.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
