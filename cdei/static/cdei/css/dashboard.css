@@ -122,9 +122,9 @@ h3.sub-title {
   position: sticky;
   top: 48px; /* Height of navbar */
   height: calc(100vh - 48px);
-  padding-top: .5rem;
+  padding-top: 48px;
   overflow-x: hidden;
-  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  overflow-y: hidden; /* NOT Scrollable content. */
 }
 
 .sidebar .nav-link {
@@ -149,6 +149,19 @@ h3.sub-title {
 .sidebar-heading {
   font-size: .75rem;
   text-transform: uppercase;
+}
+
+.sidebarContent {
+	font-size: 16pt;
+	line-height: 50px;
+}
+
+.sidebarContent:hover {
+	background: linear-gradient(to right, #6BA2A8, #4C66A7);
+	color: white;
+	
+	/* USE JAVA SCRIPT TO CHANGE 
+	
 }
 
 /*
