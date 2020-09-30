@@ -87,7 +87,7 @@ h3.sub-title {
 
 .opportunity-remove-all {
     border-radius: 0%;
-    right: 0%;
+    right: 3%;
     position: absolute;
 }
 
@@ -109,12 +109,13 @@ h3.sub-title {
 
 .sidebar {
   position: fixed;
-  top: 0;
-  bottom: 0;
+  top: 5;
+  bottom: 5;
   right: 0;
   z-index: 100; /* Behind the navbar */
   padding: 0;
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+  padding: 1em;
 }
 
 .sidebar-sticky {
@@ -138,7 +139,12 @@ h3.sub-title {
 }
 
 .sidebar .nav-link.active {
-  color: #007bff;
+  color: white;
+  border-radius: 16px;
+  background-image: linear-gradient(to right, #5b719b, #5b9aa3);
+  -webkit-box-shadow: 3px 3px 5px 6px rgba(72, 72, 72, 0.2);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    3px 3px 5px 6px rgba(72, 72, 72, 0.2);  /* Firefox 3.5 - 3.6 */
+    box-shadow:         3px 3px 5px 6px rgba(72, 72, 72, 0.2);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 
 .sidebar .nav-link:hover .feather,
@@ -146,9 +152,19 @@ h3.sub-title {
   color: inherit;
 }
 
+.sidebar li {
+    padding: 0.5em;
+}
+
 .sidebar-heading {
-  font-size: .75rem;
+  font-size: 1.0rem;
+  font-weight: bold;
   text-transform: uppercase;
+}
+
+.sidebar-nav-ul {
+    display: flex;
+    justify-content: center;
 }
 
 /*
