@@ -61,7 +61,7 @@
         <div class="row">
 
             <span class="col-md-9 col-lg-10 pt-3 px-4">
-                <div class="d-flex flex-wrap flex-md-nowrap align-items-center pb-2 mb-3">
+                <div class="d-flex flex-md-nowrap align-items-center mb-3">
                     <img src="./../../static/cdei/images/ic_dashboard.png" style="height: 30px;" />
                     <h1 class="main-title">Dashboard</h1>
                     <h2 class="date-title">21 September</h2>
@@ -267,14 +267,22 @@
                     </ul>
 
                     <div class="sidebar-bottom">
-                        <h4
-                            class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                            <span>How it works</span>
-                            <a class="d-flex align-items-center text-muted" href="#">
-                            </a>
-                        </h4>
+                        <ul class="nav flex-column sidebar-nav-ul">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <span data-feather="settings"></span>
+                                    Settings
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <span data-feather="help-circle"></span>
+                                    How it works?
+                                </a>
+                            </li>
+                        </ul>
                         <button type="button" class="btn btn-danger sidebar-signout">
-                            <span data-feather="edit"></span>
+                            <span data-feather="log-out"></span>
                             Sign Out
                         </button>
                     </div>

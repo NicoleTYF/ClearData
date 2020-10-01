@@ -171,13 +171,15 @@ h3.sub-title {
     width: 100%;
     bottom: 0;
     background-color: lightgrey;
-    padding-left: 2em;
+    padding-left: 0em;
     padding-right: 2em;
+    justify-content: center;
 }
 
 .sidebar-signout {
     border-radius: 0%;
     align-items: center;
+    margin: 1em;
 }
 
 /*
