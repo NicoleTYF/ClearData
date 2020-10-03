@@ -63,10 +63,18 @@ h5.sub-title {
 	border-style: solid;
 	
 	border-bottom-color: lightgray;
-	border-bottom-width: 5px;
+	border-bottom-width: 10px;
 	
 	border-left-color: lightgray;
-	border-left-width: medium;
+	border-left-width: 6px;
+}
+
+.opportunity-card:hover { 
+	transform:  translate(-2px, 5px);
+	transition: 0.4s;
+	box-shadow: 12px 12px 17px 9px rgba(100, 100, 100, .3);
+	border-bottom-width: 0px;
+	border-left-width:   0px;
 }
 
 .opportunity-remove-all {
@@ -86,3 +94,4 @@ h5.sub-title {
     right:    5%;
     position: absolute;
 }
+
