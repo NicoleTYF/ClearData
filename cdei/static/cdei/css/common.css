@@ -1,0 +1,155 @@
+/*
+ * Main page
+ */
+
+body {
+	font-size: 1.1rem;
+}
+
+.feather {
+	width:          18px;
+	height:         18px;
+	vertical-align: text-bottom;
+}
+
+body {
+	background-image: url("./../images/bg_web.png");
+	background-size:  cover;
+	background-repeat: no-repeat; 
+	background-position: fixed;
+}
+
+.main-title {
+	color:           white;
+	margin:          0 0.5em 0 0.5em;
+	text-decoration: none;
+    
+}
+
+/*
+ * Top Banner
+ */
+
+.banner {
+	color:            white;
+	background-color: black;
+}
+
+/* 
+ * Sidebar
+ */
+
+.sidebar {
+	position: fixed;
+	top: 5;
+	bottom: 5;
+	right: 0;
+	z-index: 100; /* Behind the navbar */
+	padding: 0;
+	width: 20%;
+	box-shadow: -14px 4px 9px 0 rgba(0, 0, 0, .1);
+}
+
+.sidebar-sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 128px; /* Height of navbar */
+	height: calc(100vh - 128px);
+	padding-top: .5rem;
+	overflow-x: hidden;
+	overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+.sidebar .nav-link {
+	width:       100%; 
+	color:       #333;
+	padding:     10px 0px 10px 30px;
+	font-weight: 500;
+}
+
+.sidebar .nav-link .feather {
+	color:         #6BA2A8;
+	margin-right:  4px;
+	margin-bottom: 2px;
+}
+
+.sidebar .nav-link.active {
+	color:              white;
+	border-radius:      80px;
+	background-image:   linear-gradient(to right, #4C66A7, #6BA2A8);
+	box-shadow:         3px 8px 9px 4px rgba(72, 72, 72, 0.2);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+	-moz-box-shadow:    3px 3px 9px 6px rgba(72, 72, 72, 0.2);  /* Firefox 3.5 - 3.6 */
+	-webkit-box-shadow: 3px 3px 9px 6px rgba(72, 72, 72, 0.2);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+	color: inherit;
+}
+
+.sidebar li {
+	padding: 0.5em;
+}
+
+.sidebar-heading {
+	font-size:      1.0rem;
+	font-weight:    bold;
+	text-transform: uppercase;
+}
+
+.sidebar-nav-ul {
+	display:         flex;
+	justify-content: center;
+}
+
+.sidebar-bottom {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: lightgrey;
+    padding-left: 0em;
+    padding-right: 2em;
+    justify-content: center;
+}
+
+.sidebar-signout {
+	width: 18.5%;
+    border-radius: 0%;
+    align-items: center;
+    margin: 1em;
+}
+
+/*
+ * Navbar
+ */
+.navbar-brand {
+	font-size:        1rem;
+	box-shadow:       inset -1px 0 0 rgba(0, 0, 0, .25);
+	padding-top:      .75rem;
+	padding-bottom:   .75rem;
+	background-color: rgba(0, 0, 0, .25);
+}
+
+.navbar .form-control {
+	padding:       .75rem 1rem;
+	border-width:  0;
+	border-radius: 0;
+}
+
+.form-control-dark {
+	color:            #fff;
+	border-color:     rgba(255, 255, 255, .1);
+	background-color: rgba(255, 255, 255, .1);
+}
+
+.form-control-dark:focus {
+	box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+	border-color: transparent;
+}
+
+/*
+ * Utilities
+ */
+
+.border-top { border-top: 1px solid #e5e5e5; }
+.border-bottom { border-bottom: 1px solid #e5e5e5; }

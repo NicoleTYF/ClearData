@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+}
+
+table,th,tbody,td {
+	border-right: 1px solid #ddd;
+}
+
+#purchaseTable, #dataTable {
+	width: 80%;
+}
+
+/* Style the list */
+table {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+	margin-top: 25px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+	background-color: white;
+}
+
+/* Add shadows on hover */
+table:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+/* 
+
+Table Headers
+
+ */
+ 
+th{
+    background-color: #ffffff;
+    color: #000000;
+	font-weight: bold;
+	height: 45px;
+	max-height: 45px;
+	vertical-align: bottom;
+	text-align: left;
+}
+
+#from, #to{
+	border-bottom: 6px solid black;
+	width: 9%;
+	max-width: 9%;
+}
+
+#datatype{
+	border-bottom: 6px solid red;
+	width: 25%;
+	max-width: 25%;
+	font-weight: bold;
+}
+
+#cost{
+	border-bottom: 6px solid gold;
+	width: 12%;
+	max-width: 12%;
+}
+
+#datapoint{
+	border-bottom: 6px solid deepskyblue;
+	width: 12%;
+	max-width: 12%;
+}
+
+#ru{
+	border-bottom: 6px solid grey;
+	width: 20%;
+	max-width: 20%;
+}
+
+#purchase{
+	border-bottom: 6px solid grey;
+}
+
+/* 
+
+Table Rows
+
+ */
+tbody:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tbody td:nth-child(4), tbody td:nth-child(5) {
+  text-align: center;
+}
+
+tbody td {
+	padding: 6px;
+}
+
+tbody img {
+	width:  20px;
+	height: 20px;
+}
+
+/*
+
+Popup Box
+
+*/
+/* Overlay background */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 101; /* Sit on top */
+  padding-top: 160px; /* Location of the box */
+  left: 0;
+  border: none;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: transparent;
+  background-image: url("../images/bg_popup.png");
+  background-position: fixed;
+  background-repeat: no-repeat;
+  margin: auto;
+  font-size: 13px;
+  padding: 0;
+  width: 40%;
+  height: 80%;
+  border: none;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+.modal-content table {
+	width:          82%;
+	padding-bottom: 20px;
+}
+
+.modal-content th {
+	height: 10px;
+}
+
+.btnGrp {
+	margin-left: 30%;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-700px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-700px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+.modal-header {
+  width:   70%;
+  color:   black;
+  margin:  100px 20px 0px 20px;
+  padding: 2px 16px;
+}
+
+.modal-body {
+	float:   center;
+	padding: 2px 16px;
+}
+
+.modal h4 {
+	width:       70%;
+	text-align:  center;
+	margin-left: 5%;
+}
+
