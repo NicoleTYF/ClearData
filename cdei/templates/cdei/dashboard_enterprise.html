@@ -19,7 +19,7 @@
         crossorigin="anonymous" />
 
     <!-- My own style sheets -->
-	<link rel="stylesheet" href="./../../static/cdei/css/common.css">
+    <link rel="stylesheet" href="./../../static/cdei/css/common.css">
     <link rel="stylesheet" href="./../../static/cdei/css/dashboard.css">
 
     <!-- Include charts.js -->
@@ -45,7 +45,7 @@
             </a>
         </div>
         <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
-        <ul class="navbar-nav px-3" >
+        <ul class="navbar-nav px-3">
             <li class="nav-item" style="font-size: 1.2em;">
                 Alex
             </li>
@@ -58,192 +58,220 @@
         </ul>
     </nav>
 
-    <div class="container-fluid" >
-        <div class="row" >
-            <span class="col-md-9 col-lg-10 pt-3 px-4" >
-                <div class="d-flex flex-md-nowrap align-items-center mb-3" style="margin: 20px 2% 20px 2%;">
-                    <img src="./../../static/cdei/images/icons/ic_dashboard_active.png" style="height: 30px;" />
-                    <h2 class="main-title align-self-end">DASHBOARD</h1>
-                    <h2 class="date-title align-self-end">September 2020</h2>
-                </div>
-            </span>
-			
-			<br><br><br><br>
+    <div class="container-fluid">
+        <div class="row">
 
             <main role="main" class="col-md-9 col-lg-9 ">
                 <div class="container">
+
+                    <br><br>
+
+                    <div class="row" style="margin: 0;">
+                        <span class="col-md-9 col-lg-10 pt-3 px-4">
+                            <div class="d-flex flex-md-nowrap align-items-center mb-3">
+                                <img src="./../../static/cdei/images/icons/ic_dashboard_active.png"
+                                    style="height: 30px;" />
+                                <h2 class="main-title align-self-end">DASHBOARD</h1>
+                                    <h2 class="date-title align-self-end">September 2020</h2>
+                            </div>
+                        </span>
+                    </div>
+
+                    <br><br>
+
                     <div class="row" style="margin: 0;">
                         <div class="col">
-                            <div
-                                class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center">
+                            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center">
                                 <div class="d-flex flex-wrap flex-md-nowrap align-items-center">
-                                    <a href="your_databank.html"><h5 class="sub-title">Data Spendings <font class="arrow">&#187;</font></h5></a>
+                                    <a href="your_databank.html">
+                                        <h5 class="sub-title">Data Spendings <font class="arrow">&#187;</font>
+                                        </h5>
+                                    </a>
                                 </div>
                             </div>
-							
-							<div class="dash-box dash-shadow" style="z-index: 1; max-height: 170px; padding: 0;">
-                                <canvas class="my-4" id="scatter_summary" 
-									style="margin: 0; padding: 0; z-index: 0; width:100%; height: 170px; "></canvas>
-								<div class="container" style="z-index: 2; position: absolute; margin-left: -3%; margin-top: -165px; width: 100%;"> 
-									<div class="row">
-										<div class="col-sm">
-										  <span class="row" style="color: #4C66A7; font-size: 50px; text-align: center; display:block;">$9050</span>
-										  <span class="row" style="font-weight:bold; text-align: center; display:block;">AUD</span>
-										</div>
-										<div class="col-sm">
-										  <span class="row" style="color: #D78E23; font-size: 50px; text-align: center; display:block;">90342</span>
-										  <span class="row" style="font-weight:bold; text-align: center; display:block;">Data points Recieved</span>
-										</div>
-										<div class="col-sm">
-										  <span class="row" style="color: #E5AD26; font-size: 50px; text-align: center; display:block;">32</span>
-										  <span class="row" style="font-weight:bold; text-align: center; display:block;">Analytic Reports Produced</span>
-									</div>
-							  </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Probably a bad idea but using br, but it's gonna work for now so ¯\_(ツ)_/¯ -->
-                    <br>
-                    <br>
-
-                    <div class="row">
-                        <div class="col">
-                            <div class="container">
-                                <div class="row">
-
-                                    <!-- The col-6 will make this column bigger -->
-                                    <div class="col-6">
-
-                                        <!-- This div holds the head for the Data Usage title -->
-                                        <div
-                                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3">
-                                            <div class="d-flex align-items-center">
-                                                <a href="analytics_tool.html"><h5 class="sub-title">Users' Data Usage <font class="arrow">&#187;</font></h5></a>
-                                            </div>
+                            <div class="dash-box dash-shadow" style="z-index: 1; max-height: 170px; padding: 0;">
+                                <canvas class="my-4" id="scatter_summary"
+                                    style="margin: 0; padding: 0; z-index: 0; width:100%; height: 170px; "></canvas>
+                                <div class="container"
+                                    style="z-index: 2; position: absolute; margin-left: -3%; margin-top: -165px; width: 100%;">
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <span class="row"
+                                                style="color: #4C66A7; font-size: 50px; text-align: center; display:block;">$9050</span>
+                                            <span class="row"
+                                                style="font-weight:bold; text-align: center; display:block;">AUD</span>
                                         </div>
-
-                                        <div class="dash-box dash-shadow">
-                                            <p class="dash-info-text">
-                                                Average user results data set: 'usage'
-                                            </p>
-                                            <canvas id="firstChart"></canvas>
+                                        <div class="col-sm">
+                                            <span class="row"
+                                                style="color: #D78E23; font-size: 50px; text-align: center; display:block;">90342</span>
+                                            <span class="row"
+                                                style="font-weight:bold; text-align: center; display:block;">Data points
+                                                Recieved</span>
                                         </div>
-
-										<br>
-
-                                        <!-- This div holds the head for the Manage Data title -->
-                                        <div
-                                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3">
-                                            <div class="d-flex align-items-center">
-                                                <a href="custom_data.html"><h5 class="sub-title">Manage Data <font class="arrow">&#187;</font></h5></a>
-                                            </div>
-                                        </div>
-
-                                        <div class="dash-box dash-shadow">
-                                            <p class="dash-info-text">
-                                                Average user results data set: 'usage'
-                                            </p>
-                                            <canvas id="secondChart"></canvas>
-                                        </div>
-                                    </div>
-
-                                    <div class="col">
-
-                                        <!-- This div holds the head for the New Opportunites title -->
-                                        <div
-                                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-2">
-                                            <div class="d-flex align-items-center">
-                                                <a href="purchase_data.html"><h5 class="sub-title">New Opportunites <font class="arrow">&#187;</font></h5></a>
-                                                <button class="btn btn-danger opportunity-remove-all" style="box-shadow: 0px 4px 0px 0px rgba(100, 100, 100, .7);">
-                                                    <img src="./../../static/cdei/images/ic_trash.png"
-                                                        style="height: 17px; margin-bottom: 3px;" />
-                                                    Delete All
-                                                </button>
-
-                                            </div>
-                                        </div>
-
-                                        <!-- This container will hold all of the opportunity cards -->
-                                        <div class="container">
-
-                                            <!-- Each opportunity card is placed on new row of the container -->
-                                            <div class="row">
-                                                <!-- Create a new card for each opportunity -->
-                                                <div class="card mb-3 opportunity-card">
-                                                    <div class="card-header opportunity-card-header">
-                                                        Silk Road
-                                                        <button type="button"
-                                                            class="btn opportunity-close-button" 
-															style="background-color: transparent; 
-															width: 30px; height: 20px; margin-top: -32px; 
-															color: grey; font-size: 2.4em;">&times;</button>
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <p class="card-text">
-                                                            <a href="#" class="badge badge-warning">Credit Card</a>
-                                                            <a href="#" class="badge badge-warning">Web Searches</a>
-                                                            <a href="#" class="badge badge-warning">Location</a>
-                                                        </p>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="card mb-3 opportunity-card">
-                                                    <div class="card-header opportunity-card-header">
-                                                        Safeway
-                                                        <button type="button"
-                                                            class="btn opportunity-close-button" 
-															style="background-color: transparent; 
-															width: 30px; height: 20px; margin-top: -32px; 
-															color: grey; font-size: 2.4em;">&times;</button>
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <p class="card-text">
-                                                            <a href="#" class="badge badge-warning">Credit Card</a>
-                                                            <a href="#" class="badge badge-warning">Location</a>
-                                                            <a href="#" class="badge badge-warning">Health</a>
-                                                            <a href="#" class="badge badge-warning">Check Ins</a>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="card mb-3 opportunity-card">
-                                                    <div class="card-header opportunity-card-header">
-                                                        Lehman Brothers
-                                                        <button type="button"
-                                                            class="btn opportunity-close-button" 
-															style="background-color: transparent; 
-															width: 30px; height: 20px; margin-top: -32px; 
-															color: grey; font-size: 2.4em;">&times;</button>
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <p class="card-text">
-                                                            <a href="#" class="badge badge-warning">Credit Card</a>
-                                                            <a href="#" class="badge badge-warning">Location</a>
-                                                            <a href="#" class="badge badge-warning">Transaction
-                                                                Amount</a>
-                                                            <a href="#" class="badge badge-warning">Transaction
-                                                                Category</a>
-                                                            <a href="#" class="badge badge-warning">Transaction
-                                                                History</a>
-                                                            <a href="#" class="badge badge-warning">Purchases</a>
-                                                            <a href="#" class="badge badge-warning">Mortgage</a>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        <div class="col-sm">
+                                            <span class="row"
+                                                style="color: #E5AD26; font-size: 50px; text-align: center; display:block;">32</span>
+                                            <span class="row"
+                                                style="font-weight:bold; text-align: center; display:block;">Analytic
+                                                Reports Produced</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Probably a bad idea but using br, but it's gonna work for now so ¯\_(ツ)_/¯ -->
+                        <br>
+                        <br>
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="container">
+                                    <div class="row">
+
+                                        <!-- The col-6 will make this column bigger -->
+                                        <div class="col-7">
+
+                                            <!-- This div holds the head for the Data Usage title -->
+                                            <div
+                                                class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3">
+                                                <div class="d-flex align-items-center">
+                                                    <a href="analytics_tool.html">
+                                                        <h5 class="sub-title">Users' Data Usage <font class="arrow">
+                                                                &#187;</font>
+                                                        </h5>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="dash-box dash-shadow">
+                                                <p class="dash-info-text">
+                                                    Average user results data set: 'usage'
+                                                </p>
+                                                <canvas id="firstChart"></canvas>
+                                            </div>
+
+                                            <br>
+
+                                            <!-- This div holds the head for the Manage Data title -->
+                                            <div
+                                                class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3">
+                                                <div class="d-flex align-items-center">
+                                                    <a href="custom_data.html">
+                                                        <h5 class="sub-title">Manage Data <font class="arrow">&#187;
+                                                            </font>
+                                                        </h5>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="dash-box dash-shadow">
+                                                <p class="dash-info-text">
+                                                    Average user results data set: 'usage'
+                                                </p>
+                                                <canvas id="secondChart"></canvas>
+                                            </div>
+                                        </div>
+
+                                        <div class="col">
+
+                                            <!-- This div holds the head for the New Opportunites title -->
+                                            <div
+                                                class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-2">
+                                                <div class="d-flex align-items-center">
+                                                    <a href="purchase_data.html">
+                                                        <h5 class="sub-title">New Opportunites <font class="arrow">
+                                                                &#187;</font>
+                                                        </h5>
+                                                    </a>
+                                                    <button class="btn btn-danger opportunity-remove-all"
+                                                        style="box-shadow: 0px 4px 0px 0px rgba(100, 100, 100, .7);">
+                                                        <img src="./../../static/cdei/images/ic_trash.png"
+                                                            style="height: 17px; margin-bottom: 3px;" />
+                                                        Delete All
+                                                    </button>
+
+                                                </div>
+                                            </div>
+
+                                            <!-- This container will hold all of the opportunity cards -->
+                                            <div class="container">
+
+                                                <!-- Each opportunity card is placed on new row of the container -->
+                                                <div class="row">
+                                                    <!-- Create a new card for each opportunity -->
+                                                    <div class="card mb-3 opportunity-card">
+                                                        <div class="card-header opportunity-card-header">
+                                                            Silk Road
+                                                            <button type="button" class="btn opportunity-close-button"
+                                                                style="background-color: transparent; 
+															width: 30px; height: 20px; margin-top: -32px; 
+															color: grey; font-size: 2.4em;">&times;</button>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p class="card-text">
+                                                                <a href="#" class="badge badge-warning">Credit Card</a>
+                                                                <a href="#" class="badge badge-warning">Web Searches</a>
+                                                                <a href="#" class="badge badge-warning">Location</a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="card mb-3 opportunity-card">
+                                                        <div class="card-header opportunity-card-header">
+                                                            Safeway
+                                                            <button type="button" class="btn opportunity-close-button"
+                                                                style="background-color: transparent; 
+															width: 30px; height: 20px; margin-top: -32px; 
+															color: grey; font-size: 2.4em;">&times;</button>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p class="card-text">
+                                                                <a href="#" class="badge badge-warning">Credit Card</a>
+                                                                <a href="#" class="badge badge-warning">Location</a>
+                                                                <a href="#" class="badge badge-warning">Health</a>
+                                                                <a href="#" class="badge badge-warning">Check Ins</a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="card mb-3 opportunity-card">
+                                                        <div class="card-header opportunity-card-header">
+                                                            Lehman Brothers
+                                                            <button type="button" class="btn opportunity-close-button"
+                                                                style="background-color: transparent; 
+															width: 30px; height: 20px; margin-top: -32px; 
+															color: grey; font-size: 2.4em;">&times;</button>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p class="card-text">
+                                                                <a href="#" class="badge badge-warning">Credit Card</a>
+                                                                <a href="#" class="badge badge-warning">Location</a>
+                                                                <a href="#" class="badge badge-warning">Transaction
+                                                                    Amount</a>
+                                                                <a href="#" class="badge badge-warning">Transaction
+                                                                    Category</a>
+                                                                <a href="#" class="badge badge-warning">Transaction
+                                                                    History</a>
+                                                                <a href="#" class="badge badge-warning">Purchases</a>
+                                                                <a href="#" class="badge badge-warning">Mortgage</a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
             </main>
 
             <nav class="d-none d-lg-block bg-light sidebar">
@@ -258,36 +286,36 @@
                     <ul class="nav flex-column sidebar-nav-ul">
                         <li class="nav-item">
                             <a class="nav-link active" href="dashboard_enterprise.html">
-                                <img src="../../static/cdei/images/icons/ic_dashboard_active.png" 
-									style="height: 15px;" />
+                                <img src="../../static/cdei/images/icons/ic_dashboard_active.png"
+                                    style="height: 15px;" />
                                 <span>Dashboard</span><span class="sr-only">(current)</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="purchase_data.html">
-                                <img src="../../static/cdei/images/icons/ic_money_normal.png" 
-									style="height: 20px;" /></img>
+                                <img src="../../static/cdei/images/icons/ic_money_normal.png"
+                                    style="height: 20px;" /></img>
                                 <span>Purchases Data</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="your_databank.html">
-                                <img src="../../static/cdei/images/icons/ic_datalog_normal.png" 
-									style="height: 20px;" /></img>
+                                <img src="../../static/cdei/images/icons/ic_datalog_normal.png"
+                                    style="height: 20px;" /></img>
                                 <span>Your Databank</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="analysis_tool.html">
-                                <img src="../../static/cdei/images/icons/ic_analysis_normal.png" 
-									style="height: 25px;" /></img>
+                                <img src="../../static/cdei/images/icons/ic_analysis_normal.png"
+                                    style="height: 25px;" /></img>
                                 <span>Analytics Tool</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="custom_tool.html">
-                                <img src="../../static/cdei/images/icons/ic_transfer_normal.png" 
-									style="height: 25px;" /></img>
+                                <img src="../../static/cdei/images/icons/ic_transfer_normal.png"
+                                    style="height: 25px;" /></img>
                                 <span>Custom Data</span>
                             </a>
                         </li>
@@ -418,7 +446,7 @@
                         },
                         gridLines: {
                             display: false,
-							tickMarkLength: 0
+                            tickMarkLength: 0
                         }
                     }],
                     xAxes: [{
