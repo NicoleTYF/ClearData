@@ -48,3 +48,14 @@
 	width: auto;
 }
 	
+	
+.product-image {
+	position: fixed;
+	background-size:contain;
+	left: 45%;
+	top: 20%;
+	overflow: hidden;
+	height: auto;
+	width: auto;
+}
+	
