@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"
+        integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css"
+        integrity="sha512-SUJFImtiT87gVCOXl3aGC00zfDl6ggYAw5+oheJvRJ8KBXZrr/TMISSdVJ5bBarbQDRC2pR5Kto3xTR0kpZInA=="
+        crossorigin="anonymous" />
+
+    <!-- My own style sheets -->
+    <link rel="stylesheet" href="./../../static/cdei/css/common.css">
+	<link rel="stylesheet" href="./../../static/cdei/css/dashboard.css">
+
+    <!-- Include charts.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+        integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"
+        integrity="sha512-G8JE1Xbr0egZE5gNGyUm1fF764iHVfRXshIoUWCTPAbKkkItp/6qal5YAHXrxEu4HNfPTQs6HOu3D5vCGS1j3w=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"
+        integrity="sha512-vBmx0N/uQOXznm/Nbkp7h0P1RfLSj0HQrFSzV8m7rOGyj30fYAOKHYvCNez+yM8IrfnW0TCodDEjRqf6fodf/Q=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"
+        integrity="sha512-QEiC894KVkN9Tsoi6+mKf8HaCLJvyA6QIRzY5KrfINXYuP9NxdIkRQhGq3BZi0J4I7V5SidGM3XUQ5wFiMDuWg=="
+        crossorigin="anonymous"></script>
+        
+    <title>Clear Data: Dashboard</title>
+    <link rel="icon" href="./../../static/cdei/images/logo-no-text.png">
+</head>
+
+<body>
+    <nav class="navbar sticky-top flex-sm-nowrap p-0 banner">
+        <div class="form-control w-100 banner">
+            <a href="#">
+                <img src="./../../static/cdei/images/logo_text.png" style="height: 33px; margin-left: 2%;" />
+            </a>
+        </div>
+        <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
+        <ul class="navbar-nav px-3" >
+            <li class="nav-item" style="font-size: 1.2em;">
+                Alex
+            </li>
+        </ul>
+        <ul class="navbar-nav px-3 banner" style="margin-right: 2%;">
+            <li class="nav-item">
+                <img src="./../../static/cdei/images/default_profile_pic.jpg"
+                    style="width: 33px; border-radius: 50%;" />
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid" >
+        <div class="row" >
+            <span class="col-md-9 col-lg-10 pt-3 px-4" >
+                <div class="d-flex flex-md-nowrap align-items-center mb-3" style="margin: 20px 2% 20px 2%;">
+                    <img src="./../../static/cdei/images/icons/ic_dashboard_active.png" style="height: 30px;" />
+                    <h2 class="main-title align-self-end">DASHBOARD</h1>
+                    <h2 class="date-title align-self-end">September 2020</h2>
+                </div>
+            </span>
+
+            <main role="main" class="col-md-9 col-lg-9 ">
+                <div class="container">
+                    <div class="row" style="margin: 0;">
+                        <div class="col">
+                            <div
+                                class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center">
+                                <div class="d-flex flex-wrap flex-md-nowrap align-items-center">
+                                    <h5 class="sub-title">Data Spendings <font class="arrow">&#187;</font></h5>
+                                </div>
+                            </div>
+							
+							<div class="dash-box dash-shadow" style="z-index: 1; max-height: 170px; padding: 0;">
+                                <canvas class="my-4" id="scatter_summary" 
+									style="margin: 0; padding: 0; z-index: 0; width:100%; height: 170px; "></canvas>
+								<div class="container" style="z-index: 2; position: absolute; margin-left: -3%; margin-top: -165px; width: 100%;"> 
+									<div class="row">
+										<div class="col-sm">
+										  <span class="row" style="color: #4C66A7; font-size: 50px; text-align: center; display:block;">$9050</span>
+										  <span class="row" style="font-weight:bold; text-align: center; display:block;">AUD</span>
+										</div>
+										<div class="col-sm">
+										  <span class="row" style="color: #D78E23; font-size: 50px; text-align: center; display:block;">90342</span>
+										  <span class="row" style="font-weight:bold; text-align: center; display:block;">Data points Recieved</span>
+										</div>
+										<div class="col-sm">
+										  <span class="row" style="color: #E5AD26; font-size: 50px; text-align: center; display:block;">32</span>
+										  <span class="row" style="font-weight:bold; text-align: center; display:block;">Analytic Reports Produced</span>
+									</div>
+							  </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Probably a bad idea but using br, but it's gonna work for now so ¯\_(ツ)_/¯ -->
+                    <br>
+                    <br>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="container">
+                                <div class="row">
+
+                                    <!-- The col-6 will make this column bigger -->
+                                    <div class="col-7">
+
+                                        <!-- This div holds the head for the Data Usage title -->
+                                        <div
+                                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3">
+                                            <div class="d-flex align-items-center">
+                                                <h5 class="sub-title">Users' Data Usage <font class="arrow">&#187;</font></h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="dash-box dash-shadow">
+                                            <p class="dash-info-text">
+                                                Average user results data set: 'usage'
+                                            </p>
+                                            <canvas id="firstChart"></canvas>
+                                        </div>
+
+										<br>
+
+                                        <!-- This div holds the head for the Manage Data title -->
+                                        <div
+                                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3">
+                                            <div class="d-flex align-items-center">
+                                                <h5 class="sub-title">Manage Data <font class="arrow">&#187;</font></h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="dash-box dash-shadow">
+                                            <p class="dash-info-text">
+                                                Average user results data set: 'usage'
+                                            </p>
+                                            <canvas id="secondChart"></canvas>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+
+                                        <!-- This div holds the head for the New Opportunites title -->
+                                        <div
+                                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-2">
+                                            <div class="d-flex align-items-center">
+
+                                                <h5 class="sub-title">New Opportunites <font class="arrow">&#187;</font></h5>
+                                                <button class="btn btn-danger opportunity-remove-all" style="box-shadow: 0px 4px 0px 0px rgba(100, 100, 100, .7);">
+                                                    <img src="./../../static/cdei/images/ic_trash.png"
+                                                        style="height: 17px;" />
+                                                    Delete All
+                                                </button>
+
+                                            </div>
+                                        </div>
+
+                                        <!-- This container will hold all of the opportunity cards -->
+                                        <div class="container">
+
+                                            <!-- Each opportunity card is placed on new row of the container -->
+                                            <div class="row">
+                                                <!-- Create a new card for each opportunity -->
+                                                <div class="card mb-3 opportunity-card">
+                                                    <div class="card-header opportunity-card-header">
+                                                        Silk Road
+                                                        <button type="button"
+                                                            class="btn btn-outline-secondary opportunity-close-button">&times;</button>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <p class="card-text">
+                                                            <a href="#" class="badge badge-warning">Credit Card</a>
+                                                            <a href="#" class="badge badge-warning">Web Searches</a>
+                                                            <a href="#" class="badge badge-warning">Location</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="card mb-3 opportunity-card">
+                                                    <div class="card-header opportunity-card-header">
+                                                        Safeway
+                                                        <button type="button"
+                                                            class="btn btn-outline-secondary opportunity-close-button">&times;</button>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <p class="card-text">
+                                                            <a href="#" class="badge badge-warning">Credit Card</a>
+                                                            <a href="#" class="badge badge-warning">Location</a>
+                                                            <a href="#" class="badge badge-warning">Health</a>
+                                                            <a href="#" class="badge badge-warning">Check Ins</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="card mb-3 opportunity-card">
+                                                    <div class="card-header opportunity-card-header">
+                                                        Lehman Brothers
+                                                        <button type="button"
+                                                            class="btn btn-outline-secondary opportunity-close-button">&times;</button>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <p class="card-text">
+                                                            <a href="#" class="badge badge-warning">Credit Card</a>
+                                                            <a href="#" class="badge badge-warning">Location</a>
+                                                            <a href="#" class="badge badge-warning">Transaction
+                                                                Amount</a>
+                                                            <a href="#" class="badge badge-warning">Transaction
+                                                                Category</a>
+                                                            <a href="#" class="badge badge-warning">Transaction
+                                                                History</a>
+                                                            <a href="#" class="badge badge-warning">Purchases</a>
+                                                            <a href="#" class="badge badge-warning">Mortgage</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <nav class="d-none d-lg-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <h4
+                        class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span style="color: #ACACAC;">Welcome back!</span>
+                        <a class="d-flex align-items-center text-muted" href="#">
+                        </a>
+                    </h4>
+                    <ul class="nav flex-column">
+                        <li class="sidebarContent">
+                            <a class="nav-link active" href="#">
+								<img src="../../static/cdei/images/icons/ic_dashboard_normal.png" style="height: 15px;" />
+                                DASHBOARD <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="sidebarContent">
+                            <a class="nav-link" href="purchase_data.html">
+                                <img src="../../static/cdei/images/icons/ic_money_normal.png" style="height: 20px;" /></img>
+                                Purchase Data
+                            </a>
+                        </li>
+                        <li class="sidebarContent">
+                            <a class="nav-link" href="your_data_bank.html">
+                                <img src="../../static/cdei/images/icons/ic_datalog_normal.png" style="height: 20px;" /></img>
+                                Your Databank
+                            </a>
+                        </li>
+                        <li class="sidebarContent">
+                            <a class="nav-link" href="#">
+                                <img src="../../../static/cdei/images/icons/ic_analysis_normal.png" style="height: 30px;" /></img>
+                                Analytics Tool
+                            </a>
+                        </li>
+                        <li class="sidebarContent">
+                            <a class="nav-link" href="#">
+                                <img src="./../../static/cdei/images/ic_transfer_normal.png" style="height: 30px;" /></img>
+                                <span>Custom Data</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="sidebar-bottom">
+                        <ul class="nav flex-column sidebar-nav-ul">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <span data-feather="settings" style="color: #999;"></span>
+                                    Settings
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <span data-feather="help-circle" style="color: #999;"></span>
+                                    How it works?
+                                </a>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-danger sidebar-signout">
+                            <span data-feather="log-out"></span>
+                            Sign Out
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+        feather.replace()
+    </script>
+
+    <!-- Graphs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script>
+
+        var doughnut_data = {
+            datasets: [{
+                data: [10, 20, 30],
+                backgroundColor: ['#5b719b', '#5b9aa3', 'rgb(250, 200, 15)']
+            }],
+
+            // These labels appear in the legend and in the tooltips when hovering different arcs
+            labels: [
+                'Location',
+                'Web Searches',
+                'Purchases'
+            ]
+        };
+
+        var doughnut_config = {
+            type: 'doughnut',
+            data: doughnut_data,
+            options: {
+                legend: {
+                    position: "right",
+                    align: "middle"
+                },
+            }
+        };
+
+        var scatter_summary_config = {
+            type: 'line',
+            data: {
+                labels: [
+                    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+                    14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
+                    27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39,
+                    40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52,
+                    53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65,
+                    66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78,
+                    79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91,
+                    92, 93, 94, 95, 96, 97, 98, 99, 100
+                ],
+                datasets: [{
+                    data: [
+                        0.08130723, 0.03331222, 0.02107889, 0.08160854, 0.09194244,
+                        0.08255853, 0.09032806, 0.08145592, 0.15430329, 0.13694773,
+                        0.15834436, 0.18326499, 0.17550957, 0.16468024, 0.19312249,
+                        0.22252504, 0.18533638, 0.25339764, 0.22182188, 0.20862269,
+                        0.20367888, 0.21247095, 0.28883766, 0.24526998, 0.29098944,
+                        0.32642326, 0.3372945, 0.2911357, 0.32458018, 0.37792906,
+                        0.35717214, 0.40505833, 0.40000427, 0.39445214, 0.37553211,
+                        0.38074393, 0.36225223, 0.44515944, 0.43209488, 0.45050144,
+                        0.49481817, 0.5053649, 0.48776489, 0.4715477, 0.45612825,
+                        0.46181851, 0.52906169, 0.55057179, 0.52096874, 0.57818851,
+                        0.58486344, 0.53820491, 0.58528576, 0.62669755, 0.631233,
+                        0.63303165, 0.56288714, 0.64199118, 0.61167288, 0.60690473,
+                        0.67989729, 0.66808636, 0.63423193, 0.63544598, 0.66417565,
+                        0.67284945, 0.75784259, 0.76079618, 0.70981307, 0.7472935,
+                        0.71618821, 0.74993312, 0.81514594, 0.73912121, 0.75892682,
+                        0.79300486, 0.83603612, 0.80880715, 0.849775, 0.84462729,
+                        0.8039443, 0.84171285, 0.91844264, 0.8826093, 0.92601116,
+                        0.87716532, 0.90297534, 0.96260378, 0.94021945, 0.96673271,
+                        0.97452163, 0.95686829, 0.9683103, 0.96852463, 1.00566968,
+                        0.95648958, 0.96213324, 0.97504347, 0.99021508, 0.97945123
+                    ],
+                    pointRadius: 1,
+                    cubicInterpolationMode: 'monotone',
+                    lineTension: 0,
+                    backgroundColor: '#FEFBF1',
+                    borderColor: '#F8F0DB',
+                    borderWidth: 1,
+                    fill: 'start',
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        display: true,
+                        ticks: {
+                            display: false,
+                            maxTicksLimit: 5
+                        },
+                        gridLines: {
+                            display: false,
+							tickMarkLength: 0
+                        }
+                    }],
+                    xAxes: [{
+                        display: true,
+                        ticks: {
+                            display: false,
+                            stepSize: 100,
+                            maxTicksLimit: 10
+                        },
+                        gridLines: {
+                            display: false,
+                            tickMarkLength: 0,
+                        }
+                    }]
+                },
+                legend: {
+                    display: false,
+                }
+            }
+        };
+
+        var bar_data = {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+            datasets: [{
+                label: 'Example bar',
+                data: [3.5, 5.5, 4.1, 7.8, 6.9, 5.7],
+                backgroundColor: '#5b719b'
+            }]
+        };
+
+        var bar_config = {
+            type: 'bar',
+            data: bar_data,
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            callback: function (value, index, values) {
+                                return value + ' GB';
+                            }
+                        },
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Data Consumption'
+                        }
+                    }]
+                },
+                // This helps remove the pesky legend at the top
+                legend: {
+                    display: false
+                },
+                tooltips: {
+                    callbacks: {
+                        label: function (tooltipItem) {
+                            return tooltipItem.yLabel;
+                        }
+                    }
+                }
+            }
+        };
+
+        window.onload = function () {
+            var scatter_summary_canvas = document.getElementById('scatter_summary').getContext('2d');
+            window.my_scatter_summary = new Chart(scatter_summary_canvas, scatter_summary_config);
+
+            var doughnut_canvas = document.getElementById('firstChart').getContext('2d');
+            window.my_doughnut = new Chart(doughnut_canvas, doughnut_config);
+
+            var bar_canvas = document.getElementById('secondChart').getContext('2d');
+            window.my_bar = new Chart(bar_canvas, bar_config);
+
+            // var line_canvas = document.getElementById('thirdChart').getContext('2d');
+            // window.my_canvas = new Chart(line_canvas, line_config);
+        };
+    </script>
+</body>
+
+</html>
