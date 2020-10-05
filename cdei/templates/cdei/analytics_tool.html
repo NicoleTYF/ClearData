@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"
+        integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css"
+        integrity="sha512-SUJFImtiT87gVCOXl3aGC00zfDl6ggYAw5+oheJvRJ8KBXZrr/TMISSdVJ5bBarbQDRC2pR5Kto3xTR0kpZInA=="
+        crossorigin="anonymous" />
+
+    <!-- My own style sheets -->
+    <link rel="stylesheet" href="./../../static/cdei/css/common.css">
+    <link rel="stylesheet" href="./../../static/cdei/css/dashboard.css">
+
+    <!-- Include charts.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+        integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"
+        integrity="sha512-G8JE1Xbr0egZE5gNGyUm1fF764iHVfRXshIoUWCTPAbKkkItp/6qal5YAHXrxEu4HNfPTQs6HOu3D5vCGS1j3w=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"
+        integrity="sha512-vBmx0N/uQOXznm/Nbkp7h0P1RfLSj0HQrFSzV8m7rOGyj30fYAOKHYvCNez+yM8IrfnW0TCodDEjRqf6fodf/Q=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"
+        integrity="sha512-QEiC894KVkN9Tsoi6+mKf8HaCLJvyA6QIRzY5KrfINXYuP9NxdIkRQhGq3BZi0J4I7V5SidGM3XUQ5wFiMDuWg=="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar sticky-top flex-sm-nowrap p-0 banner">
+        <div class="form-control w-100 banner">
+            <a href="#">
+                <img src="./../../static/cdei/images/logo_text.png" style="height: 33px; margin-left: 2%;" />
+            </a>
+        </div>
+        <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
+        <ul class="navbar-nav px-3">
+            <li class="nav-item" style="font-size: 1.2em;">
+                Alex
+            </li>
+        </ul>
+        <ul class="navbar-nav px-3 banner" style="margin-right: 2%;">
+            <li class="nav-item">
+                <img src="./../../static/cdei/images/default_profile_pic.jpg"
+                    style="width: 33px; border-radius: 50%;" />
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <main role="main" class="col-md-9 col-lg-9 ">
+                <div class="container">
+
+                    <br><br>
+
+                    <div class="row" style="margin: 0;">
+                        <span class="col-md-9 col-lg-10 pt-3 px-4">
+                            <div class="d-flex flex-md-nowrap align-items-center mb-3">
+                                <img src="./../../static/cdei/images/icons/ic_dashboard_active.png"
+                                    style="height: 30px;" />
+                                <h2 class="main-title align-self-end">ANALYTICS TOOL</h1>
+                                    <h2 class="date-title align-self-end">September 2020</h2>
+                            </div>
+                        </span>
+                    </div>
+
+                    <br><br>
+
+                    <div class="row" style="margin: 0;">
+                        <div class="col">
+                            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center">
+                                <div class="d-flex flex-wrap flex-md-nowrap align-items-center">
+                                    <a href="your_databank.html">
+                                        <h5 class="sub-title">Data Sourcing <font class="arrow">&#187;</font>
+                                        </h5>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="dash-box dash-shadow dash-margin" style="padding: 1em;">
+                                <div id="data_source_map" style="width: 900px; height: 500px;"></div>
+                            </div>
+                        </div>
+                    </div>
+            </main>
+
+            <nav class="d-none d-lg-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <h4
+                        class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span style="color: #ACACAC;">Welcome back!</span>
+                        <a class="d-flex align-items-center text-muted" href="#">
+                        </a>
+                    </h4>
+                    <!-- Icons taken from: https://feathericons.com -->
+                    <ul class="nav flex-column sidebar-nav-ul">
+                        <li class="nav-item">
+                            <a class="nav-link" href="dashboard_enterprise.html">
+                                <img src="../../static/cdei/images/icons/ic_dashboard_normal.png"
+                                    style="height: 15px;" />
+                                <span>Dashboard</span><span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="purchase_data.html">
+                                <img src="../../static/cdei/images/icons/ic_money_normal.png"
+                                    style="height: 20px;" /></img>
+                                <span>Purchases Data</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="your_databank.html">
+                                <img src="../../static/cdei/images/icons/ic_datalog_normal.png"
+                                    style="height: 20px;" /></img>
+                                <span>Your Databank</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="analytics_tool.html">
+                                <img src="../../static/cdei/images/icons/ic_analysis_active.png"
+                                    style="height: 25px;" /></img>
+                                <span>Analytics Tool</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="custom_tool.html">
+                                <img src="../../static/cdei/images/icons/ic_transfer_normal.png"
+                                    style="height: 25px;" /></img>
+                                <span>Custom Data</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="sidebar-bottom">
+                        <ul class="nav flex-column sidebar-nav-ul">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <span data-feather="settings" style="color: #999;"></span>
+                                    Settings
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <span data-feather="help-circle" style="color: #999;"></span>
+                                    How it works?
+                                </a>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-danger sidebar-signout">
+                            <span data-feather="log-out"></span>
+                            Sign Out
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+        feather.replace()
+    </script>
+
+    <!-- Graphs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['geochart'],
+            // Note: you will need to get a mapsApiKey for your project.
+            // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+            'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+        });
+        google.charts.setOnLoadCallback(drawRegionsMap);
+
+        function drawRegionsMap() {
+            var data = google.visualization.arrayToDataTable([
+                ['Country', 'Data Density'],
+                ['Australia', 400],
+                ['Germany', 200],
+                ['United States', 300],
+                ['Brazil', 400],
+                ['Canada', 500],
+                ['France', 600],
+                ['RU', 700]
+            ]);
+
+            var options = {
+                colorAxis: { colors: ['white', '#4C66A7'] } // white to blue
+            };
+
+            var chart = new google.visualization.GeoChart(document.getElementById('data_source_map'));
+
+            chart.draw(data, options);
+        }
+    </script>
+
+</body>
+
+</html>
