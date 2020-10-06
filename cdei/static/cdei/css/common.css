@@ -36,9 +36,10 @@ body {
  */
 
 .sidebar {
-	position: fixed;
-	top: 5;
-	bottom: 5;
+    position: fixed;
+    margin-top: 3em;
+	top: 0;
+	bottom: 0;
 	right: 0;
 	z-index: 100; /* Behind the navbar */
 	padding: 0;
