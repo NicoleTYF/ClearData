@@ -94,6 +94,54 @@
                                 <div id="data_source_map" style="width: 900px; height: 500px;"></div>
                             </div>
                         </div>
+
+                        <div class="col">
+                            <div class="container">
+                                <div class="row">
+
+                                    <!-- The col-6 will make this column bigger -->
+                                    <div class="col-6">
+
+                                        <!-- This div holds the head for the Data Usage title -->
+                                        <div
+                                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3">
+                                            <div class="d-flex align-items-center">
+                                                <h5 class="sub-title">Users' Data Usage <font class="arrow">
+                                                        &#187;</font>
+                                                </h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="dash-box dash-shadow">
+                                            <p class="dash-info-text">
+                                                Average user results data set: 'usage'
+                                            </p>
+                                            <canvas id="dataCollection"></canvas>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6">
+
+                                        <!-- This div holds the head for the Manage Data title -->
+                                        <div
+                                            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3">
+                                            <div class="d-flex align-items-center">
+                                                <h5 class="sub-title">Manage Data <font class="arrow">&#187;
+                                                    </font>
+                                                </h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="dash-box dash-shadow">
+                                            <p class="dash-info-text">
+                                                Average user results data set: 'usage'
+                                            </p>
+                                            <canvas id="secondChart"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
             </main>
 
@@ -217,6 +265,35 @@
 
             chart.draw(data, options);
         }
+    </script>
+
+    <script>
+
+        var scatterChartData = {
+            labels: ['13-07-2020', '15-07-2020', '16-07-2020', '17-07-2020', '18-07-2020'],
+            datasets: [{
+                label: 'My First dataset',
+                borderColor: 'red',
+                backgroundColor: 'red',
+                data: [1, 2.5, 3, 4, 6]
+            }]
+        };
+
+        var dataCollectionConfig = {
+            type: 'scatter',
+            data: scatterChartData,
+            options: {
+                title: {
+                    display: true,
+                    text: 'Data consumption'
+                },
+            }
+        };
+
+        window.onload = function () {
+            var dataCollectionCanvas = document.getElementById('dataCollection').getContext('2d');
+            window.dataCollectionSummary = new Chart(dataCollectionCanvas, dataCollectionConfig);
+        };
     </script>
 
 </body>
