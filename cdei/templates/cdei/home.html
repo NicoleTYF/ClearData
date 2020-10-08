@@ -2,73 +2,104 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="./../../static/css/home-style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	  <script type="text/javascript" src="./../../static/cdei/js/generic.js"></script>
 
-      <title>Clear Data</title>
-    <link rel="icon" href="./../../static/cdei/images/logo-no-text.png">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <!-- My own style sheets -->
+		<link rel="stylesheet" href="./../../static/cdei/css/common.css">
+
+  	<link rel="stylesheet" href="./../../static/cdei/css/home_not_signed_in.css">
 </head>
 
 <body>
-    <div class="bgSetUp">
-    		<div class="grid">
-    			<!-- blank space -->
-    			<div class=bgPhoneSetUp> </div>
-			<div class="logo">
-				<img class="logo" src="./../../static/cdei/images/logo.png">
-					</div>
-					<!-- SET UP NAVIGATION-->
-			<div class="menu">
-				<nav>
-			    		<div class="nav-links">
-			    			<ul>
-			    				<li><a href="#">Enterprise</a></li>
-			    				<li><a href="#">User</a></li>
-			    				<li><a href="#">Login</a></li>
-					</div>
-				</nav>
-				<!-- blank space -->
-				<div></div>
-				
-				<!-- Blank intentional white space Row -->
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				
-				<!-- Row for feature text -->
-	  			<div></div>
+	<div class="video-bg">
+	    <video loop muted autoplay poster="img/videoframe.jpg" class="video-bg__video">
+	        <source src="./../../static/cdei/images/bg_home.mp4" type="video/mp4">
+	    </video>
+	</div>
+
+	<div class="info-image">
+		<img src="./../../static/cdei/images/img_intro.png" width="100%" height="100%">
+	</div>
+	
+	<div class="product-image">
+		<img src="./../../static/cdei/images/img_product.png" width="70%" height="70%">
+	</div>
+
+    <nav class="navbar sticky-top flex-sm-nowrap p-0 banner">
+        <div class="form-control w-100 banner">
+            <a href="#">
+                <img src="./../../static/cdei/images/logo_text.png" style="height: 33px; margin-left: 2%;" />
+            </a>
+        </div>
+        <ul class="navbar-nav px-5" >
+            <li class="nav-item" style="font-size: 1.2em;">
+            		<a href="home_signed_in.html">
+	                <button type="button" class="btn_log_on">
+	            			LogOn
+	                </button>
+	              </a>
+            </li>
+        </ul>
+        <ul class="navbar-nav px-3 banner" style="margin-right: 2%;">
+            <li class="nav-item">
+                
+            </li>
+        </ul>
+    </nav>
+
+
+	                 <!-- WORK SPACE-->
+    <div class="container-fluid" >
+        <div class="row" >
+		  	<div class="container" style="background: url(./../../static/cdei/images/bg_home.mp4); margin-right: 20%;">
 				<div> 
-					<H1 class="feature-text"> The Future of <br> Data Analytics <br> Software </H1> 
+					<H1 class="feature-text" style="color: #fff"> The Future of <br> Data Analytics <br> Software <br>  </H1> 
 				</div>
-				<div></div>
-				<div></div>
 				
-				<!-- Row for sub text -->
-				<div></div>
-				
-				<div class="verticalLine">
-					<H2 class="sub-text"> Why let Google take your data for free when 
+				<div class="sub-text">
+					<H4> Why let companies take your data for free when 
 					we can match you with a trusted business that will pay you for it? 
-					</H2> 
+					</H4> 
 				</div>
-				<div></div>
-				<div></div>
-				
-				<!-- Row for button -->
-				<div></div>
-				<div class="tryNowButton">
-					<a href="selectionPage.html">
-						<button1 type="button">
-							TRY OUT NOW!
-						</button1>
-					</a>
-				</div>
-				<div></div>
-				<div></div>
-				</div>
+
+
 			</div>
-    		</div>
+
+
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+        feather.replace()
+    </script>
+	
+	<script>		
+
+		
+	</script>
+
+ 
 </body>
+
 </html>

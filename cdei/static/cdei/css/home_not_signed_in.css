@@ -1,0 +1,68 @@
+/* 
+ * Style sheet for home.html
+ */
+
+
+
+
+.feature-text {
+	margin-top: 15%;
+	color: #fff;
+	line-height: 40pt;
+	border-bottom: 4px solid #FFF;
+	width: 25%;
+}
+
+.sub-text {
+	color: #FFE88F;
+	line-height: 20pt;
+	width: 40%	
+}
+
+.video-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.video-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+}
+
+.info-image {
+	position: absolute;
+	background-size:contain;
+	right: 10%;
+	left: 10%;
+	bottom: 0;
+	overflow: hidden;
+
+}
+	
+	
+.product-image {
+	position: fixed;
+	background-size:contain;
+	left: 60%;
+	top: 20%;
+	overflow: hidden;
+	height: auto;
+	width: auto;
+}
+	
+.btn_log_on {
+	background: black;
+	color: #FFE88F;
+	padding-left: 40px;
+	padding-right: 40px;
+	border: 4px solid #FFE88F;
+}
+	
