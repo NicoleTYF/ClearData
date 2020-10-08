@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- My own style sheets -->
+
+  	<link rel="stylesheet" href="./../../static/cdei/css/common.css">
+
+  	<link rel="stylesheet" href="./../../static/cdei/css/login.css">
+</head>
+
+<body>
+	<!-- 
+	** For Video background if wanted **
+	<div class="video-bg">
+	    <video loop muted autoplay poster="img/videoframe.jpg" class="video-bg__video">
+	        <source src="./../../static/cdei/images/bg_home.mp4" type="video/mp4">
+	    </video>
+	</div>
+	-->
+
+	<div class="login-page">
+	  <div class="form">
+	    <form class="register-form">
+	      <input type="text" placeholder="name"/>
+	      <input type="password" placeholder="password"/>
+	      <input type="text" placeholder="email address"/>
+	      <button>create</button>
+	      <p class="message">Already registered? <a href="#">Sign In</a></p>
+	    </form>
+	    <form class="login-form">
+	      <input type="text" placeholder="username"/>
+	      <input type="password" placeholder="password"/>
+	      <button class="nav-link.active">login</button>
+	      <p class="message">Not registered? <a href="#">Create an account</a></p>
+	    </form>
+	  </div>
+	</div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+	<script>		
+		$('.message a').click(function(){
+		   $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+		});
+	
+	</script>
+
+ 
+</body>
+
+</html>
