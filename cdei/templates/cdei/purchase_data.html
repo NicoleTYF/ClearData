@@ -19,8 +19,9 @@
         crossorigin="anonymous" />
 
     <!-- My own style sheets -->
-	<link rel="stylesheet" href="./../../static/cdei/css/common.css">
+    <link rel="stylesheet" href="./../../static/cdei/css/common.css">
     <link rel="stylesheet" href="./../../static/cdei/css/tablePage.css">
+    <link rel="stylesheet" href="./../../static/cdei/css/dashboard.css">
 
     <!-- Include charts.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
@@ -45,7 +46,7 @@
             </a>
         </div>
         <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
-        <ul class="navbar-nav px-3" >
+        <ul class="navbar-nav px-3">
             <li class="nav-item" style="font-size: 1.2em;">
                 Alex
             </li>
@@ -58,150 +59,34 @@
         </ul>
     </nav>
 
-    <div class="container-fluid" >
-        <div class="row" >
-            <span class="col-md-9 col-lg-10 pt-3 px-4" >
-                <div class="d-flex flex-md-nowrap align-items-center mb-3" style="margin: 20px 2% 20px 2%;">
-                    <img src="./../../static/cdei/images/icons/ic_money_active.png" style="height: 30px;" />
-                    <h2 class="main-title align-self-end">PURCHASE DATA</h2>
+    <div class="container-fluid">
+        <div class="row">
+
+            <main role="main" class="col-md-9 col-lg-9 ">
+                <div class="container">
+
+                    <br><br>
+
+                    <div class="row" style="margin: 0;">
+                        <span class="col-md-9 col-lg-10 pt-3 px-4">
+                            <div class="d-flex flex-md-nowrap align-items-center mb-3">
+                                <img src="./../../static/cdei/images/icons/ic_money_active.png" style="height: 30px;" />
+                                <h2 class="main-title align-self-end">Purchase Data</h1>
+                            </div>
+                        </span>
+                    </div>
+
+                    <br><br>
+
+                    <div class="row" style="margin: 1em;">
+                        <div class="col">
+                            <div class="dash-box dash-shadow dash-margin" style="padding: 1em;">
+                                Hi Hi
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-            </span>
-
-            <main role="main" id="purchaseTable">
-				<table class="w-100" >
-					  <tr class= 'header' >
-						  <th id= 'from'>FROM</td>
-						  <th id= 'to'>TO</td>
-						  <th id= 'datatype'>DATA TYPE</td>
-						  <th id= 'cost'>TOTAL COST</td>
-						  <th id= 'datapoint'>DATA POINTS</td>
-						  <th id= 'ru'>RECOMMENED USE</td>
-						  <th id= 'purchase'>PURCHASE</td>
-					  </tr> 
-					  
-					  <!-- IMPORTANT: When importing database data into this table, 
-									  you can use a for loop to print the following HTML code after: 
-					  <tbody class= 'record' >
-							<td>to</td>
-							<td>from</td>
-							<td><b> data type </b></td>
-							<td>cost</td>
-							<td>datapoint</td>
-							<td>ru</td>
-							<td>purchase</td>
-					  </tbody>
-					  -->
-					  
-					  <!-- This are sample records, when importing data into the table, 
-						   remove these records  -->
-						  <tbody class= 'record' >
-								<td>04-08-2016</td>
-								<td>03-09-2020</td>
-								<td><b>Location and Transaction Amount</b></td>
-								<td>$2304</td>
-								<td>1,253</td>
-								<td>Marketing, potential business locations</td>
-								<td><button class="BuyBtn" disabled>Purchased</button></td>
-						  </tbody>
-						  <tbody class= 'record' >
-								<td>04-08-2016</td>
-								<td>03-09-2020</td>
-								<td><b>Location Data</b></td>
-								<td>$2304</td>
-								<td>1,253</td>
-								<td>Marketing</td>
-								<td><button class="BuyBtn">Buy Data</button></td>
-						  </tbody>
-						  <tbody class= 'record' >
-								<td>04-08-2016</td>
-								<td>03-09-2020</td>
-								<td><b>Bluetooth Connection</b></td>
-								<td>$2304</td>
-								<td>1,253</td>
-								<td>Marketing, Machine Learning</td>
-								<td><button class="BuyBtn">Buy Data</button></td>
-						  </tbody>
-						  <tbody class= 'record' >
-								<td>04-08-2016</td>
-								<td>03-09-2020</td>
-								<td><b>Location and Transaction Amount</b></td>
-								<td>$2304</td>
-								<td>1,253</td>
-								<td>Data Traffic Usage</td>
-								<td><button class="BuyBtn">Buy Data</button></td>
-						  </tbody>
-						  <tbody class= 'record' >
-								<td>04-08-2016</td>
-								<td>03-09-2020</td>
-								<td><b>Transaction Category</b></td>
-								<td>$2304</td>
-								<td>1,253</td>
-								<td>Machine Learning</td>
-								<td><button class="BuyBtn">Buy Data</button></td>
-						  </tbody>
-
-				</table>
-				
-				<div id="myModal" class="modal"> 
-					<div class="modal-content">
-						<div class="modal-header">
-						  <h2>Are you sure you want to buy the following data?</h2>
-						</div>
-						<div class="modal-body">
-						<table>
-						<tr class= 'header'>
-						  <th id= 'from'>FROM</td>
-						  <th id= 'to'>TO</td>
-						  <th id= 'datatype'>DATA TYPE</td>
-						  <th id= 'cost'>COST</td>
-						  <th id= 'datapoint'>DP</td>
-						  <th id= 'ru'>USAGE</td>
-						</tr> 
-						<tbody class= 'record' >
-								<td>04-08-2016</td>
-								<td>03-09-2020</td>
-								<td><b>Transaction Category</b></td>
-								<td>$2304</td>
-								<td>1,253</td>
-								<td>Machine Learning</td>
-						  </tbody>
-						
-						</table>
-						
-						<br>
-						<div class="btnGrp">
-							<button id="yesBtn" class="btn btn-success" 
-									style="box-shadow: 0px 4px 0px 0px rgba(100, 100, 100, .7);">
-								Yes
-							</button>
-							&emsp;
-							<button id="closeBtn" class="btn btn-danger" 
-									style="box-shadow: 0px 4px 0px 0px rgba(100, 100, 100, .7);">
-								Cancel
-							</button>
-						</div>
-						
-						</div>
-					</div>
-				</div>
-				
-				<div id="buySuccessModal" class="modal"> 
-					<div class="modal-content">
-						<div class="modal-header">
-						  <h2>Purchase data successful, thank you.</h2>
-						</div>
-						<div class="modal-body">
-							<br><br>
-							<h4>This data has been added into <br>
-								<a href="your_databank.html">Your Databank</a>.</h4>
-							<br><br>
-							<button id="closeWinBtn" class="btn btn-danger w-75" 
-									style="box-shadow: 0px 4px 0px 0px rgba(100, 100, 100, .7); margin-left: 20px;">
-								Close Window
-							</button>
-						</div>
-					</div>
-				</div>
             </main>
 
             <nav class="d-none d-lg-block bg-light sidebar">
@@ -216,36 +101,36 @@
                     <ul class="nav flex-column sidebar-nav-ul">
                         <li class="nav-item">
                             <a class="nav-link" href="dashboard_enterprise.html">
-                                <img src="../../static/cdei/images/icons/ic_dashboard_normal.png" 
-									style="height: 15px;" />
+                                <img src="../../static/cdei/images/icons/ic_dashboard_normal.png"
+                                    style="height: 15px;" />
                                 <span>Dashboard</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="purchase_data.html">
-                                <img src="../../static/cdei/images/icons/ic_money_active.png" 
-									style="height: 20px;" /></img>
-                                <span>Purchases Data</span><span class="sr-only">(current)</span>
+                                <img src="../../static/cdei/images/icons/ic_money_active.png"
+                                    style="height: 20px;" /></img>
+                                <span>Purchase Data</span><span class="sr-only">(current)</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="your_databank.html">
-                                <img src="../../static/cdei/images/icons/ic_datalog_normal.png" 
-									style="height: 20px;" /></img>
+                                <img src="../../static/cdei/images/icons/ic_datalog_normal.png"
+                                    style="height: 20px;" /></img>
                                 <span>Your Databank</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="analysis_tool.html">
-                                <img src="../../static/cdei/images/icons/ic_analysis_normal.png" 
-									style="height: 25px;" /></img>
+                            <a class="nav-link" href="analytics_tool.html">
+                                <img src="../../static/cdei/images/icons/ic_analysis_normal.png"
+                                    style="height: 25px;" /></img>
                                 <span>Analytics Tool</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="custom_tool.html">
-                                <img src="../../static/cdei/images/icons/ic_transfer_normal.png" 
-									style="height: 25px;" /></img>
+                                <img src="../../static/cdei/images/icons/ic_transfer_normal.png"
+                                    style="height: 25px;" /></img>
                                 <span>Custom Data</span>
                             </a>
                         </li>
@@ -285,69 +170,69 @@
     <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="../../../../assets/js/vendor/popper.min.js"></script>
     <script src="../../../../dist/js/bootstrap.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
     <script>
         feather.replace()
     </script>
-	
-	<script>		
-		$('.BuyBtn').on('click', function () {
-			$('#myModal').css('display', 'block');
-		});
-		
-		$('#closeBtn').on('click', function () {
-			$('#myModal').css('display', 'none');
-		});
-		
-		$('#yesBtn').on('click', function () {
-			// TODO: USER HAS CONFIRMED BUYING A PIECE OF DATA, SO
-			//       WRITE YOUR DJANGO FUNCTION FOR PURCHASING DATA HERE!!!!!!!!!!!!
-		
-			// close the confirm popup, open the buy successful popup   
-			$('#myModal').css('display', 'none');
-			$('#buySuccessModal').css('display', 'block');
-		});
-		
-		$('#closeWinBtn').on('click', function () {
-			$('#buySuccessModal').css('display', 'none');
-		});
-		
-		// Get the modal
-		var smodal = document.getElementById("buySuccessModal");
 
-		// Get the button that opens the modal
-		var yesbtn = document.getElementById("yesBtn");
+    <script>
+        $('.BuyBtn').on('click', function () {
+            $('#myModal').css('display', 'block');
+        });
 
-		// Get the cancel Button that closes the modal
-		var closeWinBtn = document.getElementById("closeWinBtn");
+        $('#closeBtn').on('click', function () {
+            $('#myModal').css('display', 'none');
+        });
 
-		// When the user clicks on the button, open the modal
-		yesbtn.onclick = function() {
-		  // TODO: WRITE YOUR DJANGO FUNCTION FOR PURCHASING DATA HERE!!!!!!!!!!!!!!!!!!!!!!
-		
-		
-		  bmodal.style.display = "none";
-		  smodal.style.display = "block";
-		}
+        $('#yesBtn').on('click', function () {
+            // TODO: USER HAS CONFIRMED BUYING A PIECE OF DATA, SO
+            //       WRITE YOUR DJANGO FUNCTION FOR PURCHASING DATA HERE!!!!!!!!!!!!
 
-		// When the user clicks on cancel button, close the modal
-		closeWinBtn.onclick = function() {
-		  smodal.style.display = "none";
-		}
+            // close the confirm popup, open the buy successful popup   
+            $('#myModal').css('display', 'none');
+            $('#buySuccessModal').css('display', 'block');
+        });
 
-		// When the user clicks anywhere outside of the modal, close it
-		window.onclick = function(event) {
-		  if (event.target == smodal) {
-			smodal.style.display = "none";
-		  }
-		}
-		
-	</script>
+        $('#closeWinBtn').on('click', function () {
+            $('#buySuccessModal').css('display', 'none');
+        });
 
- 
+        // Get the modal
+        var smodal = document.getElementById("buySuccessModal");
+
+        // Get the button that opens the modal
+        var yesbtn = document.getElementById("yesBtn");
+
+        // Get the cancel Button that closes the modal
+        var closeWinBtn = document.getElementById("closeWinBtn");
+
+        // When the user clicks on the button, open the modal
+        yesbtn.onclick = function () {
+            // TODO: WRITE YOUR DJANGO FUNCTION FOR PURCHASING DATA HERE!!!!!!!!!!!!!!!!!!!!!!
+
+
+            bmodal.style.display = "none";
+            smodal.style.display = "block";
+        }
+
+        // When the user clicks on cancel button, close the modal
+        closeWinBtn.onclick = function () {
+            smodal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == smodal) {
+                smodal.style.display = "none";
+            }
+        }
+
+    </script>
+
+
 </body>
 
 </html>
