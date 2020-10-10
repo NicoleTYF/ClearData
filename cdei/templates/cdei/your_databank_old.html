@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"
+        integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css"
+        integrity="sha512-SUJFImtiT87gVCOXl3aGC00zfDl6ggYAw5+oheJvRJ8KBXZrr/TMISSdVJ5bBarbQDRC2pR5Kto3xTR0kpZInA=="
+        crossorigin="anonymous" /> <!-- My own style sheets -->
+    <link rel="stylesheet" href="./../../static/cdei/css/common.css">
+    <link rel="stylesheet" href="./../../static/cdei/css/tablePage.css">
+</head>
+
+<body>
+    <nav class="navbar sticky-top flex-sm-nowrap p-0 banner">
+        <div class="form-control w-100 banner"> <a href="#"> <img src="./../../static/cdei/images/logo_text.png"
+                    style="height: 33px; margin-left: 2%;" /> </a> </div>
+        <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
+        <ul class="navbar-nav px-3">
+            <li class="nav-item" style="font-size: 1.2em;"> Alex </li>
+        </ul>
+        <ul class="navbar-nav px-3 banner" style="margin-right: 2%;">
+            <li class="nav-item"> <img src="./../../static/cdei/images/default_profile_pic.jpg"
+                    style="width: 33px; border-radius: 50%;" /> </li>
+        </ul>
+    </nav>
+    <div class="container-fluid">
+        <div class="row"> <span class="col-md-9 col-lg-10 pt-3 px-4">
+                <div class="d-flex flex-md-nowrap align-items-center mb-3" style="margin: 20px 2% 20px 2%;"> <img
+                        src="./../../static/cdei/images/icons/ic_datalog_active.png" style="height: 30px;" />
+                    <h2 class="main-title align-self-end">YOUR DATABANK</h2>
+                </div>
+            </span>
+            <main role="main" id="dataTable">
+                <table class="w-100">
+                    <tr class='header'>
+                        <th id='from'>FROM</td>
+                        <th id='to'>TO</td>
+                        <th id='datatype'>DATA TYPE</td>
+                        <th id='cost'>TOTAL COST</td>
+                        <th id='datapoint'>DATA POINTS</td>
+                        <th id='ru'>RECOMMENED USE</td>
+                        <th id='purchase'>DOWNLOAD</td>
+                    </tr>
+                    <!-- IMPORTANT: When importing database data into this table, 									  you can use a for loop to print the following HTML code after: 					  <tbody class= 'record' > 							<td>    to            </td> 							<td>    from          </td> 							<td><b> data type </b></td> 							<td>    cost          </td> 							<td>    datapoint     </td> 							<td>    ru            </td> 														<td><a id='DldLink' download='filename.csv'> .csv file 									<img src="./../../static/cdei/images/icons/ic_download.png"></a> 							</td> 					  </tbody> 					  -->
+                    <!-- This are sample records, when importing data into the table, 						   remove these records  -->
+                    <tbody class='record'>
+                        <td>04-08-2016</td>
+                        <td>03-09-2020</td>
+                        <td><b>Location and Transaction Amount</b></td>
+                        <td>$2304</td>
+                        <td>1,253</td>
+                        <td>Marketing, potential business locations</td>
+                        <td><a class='DldLink' href='./../../static/cdei/sample_files/testfile.csv' download> .csv file
+                                <img src="./../../static/cdei/images/icons/ic_download.png"></a> </td>
+                    </tbody>
+                    <tbody class='record'>
+                        <td>04-08-2016</td>
+                        <td>03-09-2020</td>
+                        <td><b>Location Data</b></td>
+                        <td>$2304</td>
+                        <td>1,253</td>
+                        <td>Marketing</td>
+                        <td><a class='DldLink' href='./../../static/cdei/sample_files/testfile.csv' download> .csv file
+                                <img src="./../../static/cdei/images/icons/ic_download.png"></a> </td>
+                    </tbody>
+                    <tbody class='record'>
+                        <td>04-08-2016</td>
+                        <td>03-09-2020</td>
+                        <td><b>Bluetooth Connection</b></td>
+                        <td>$2304</td>
+                        <td>1,253</td>
+                        <td>Marketing, Machine Learning</td>
+                        <td><a class='DldLink' href='./../../static/cdei/sample_files/testfile.csv' download> .csv file
+                                <img src="./../../static/cdei/images/icons/ic_download.png"></a> </td>
+                    </tbody>
+                    <tbody class='record'>
+                        <td>04-08-2016</td>
+                        <td>03-09-2020</td>
+                        <td><b>Location and Transaction Amount</b></td>
+                        <td>$2304</td>
+                        <td>1,253</td>
+                        <td>Data Traffic Usage</td>
+                        <td><a class='DldLink' href='./../../static/cdei/sample_files/testfile.csv' download> .csv file
+                                <img src="./../../static/cdei/images/icons/ic_download.png"></a> </td>
+                    </tbody>
+                    <tbody class='record'>
+                        <td>04-08-2016</td>
+                        <td>03-09-2020</td>
+                        <td><b>Transaction Category</b></td>
+                        <td>$2304</td>
+                        <td>1,253</td>
+                        <td>Machine Learning</td>
+                        <td><a class='DldLink' href='./../../static/cdei/sample_files/testfile.csv' download> .csv file
+                                <img src="./../../static/cdei/images/icons/ic_download.png"></a> </td>
+                    </tbody>
+                </table>
+                <div id="dldModal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2><img src="./../../static/cdei/images/icons/ic_download.png" width="40" height="40" />
+                                &emsp;Download Successful</h2>
+                        </div>
+                        <div class="modal-body"> <br><br><br>
+                            <!-- TODO: Replace fileName with the chosen data type name -->
+                            <h4>fileName.csv</h4> <br><br><br> <button id="doneBtn" class="btn btn-success w-75"
+                                style="box-shadow: 0px 4px 0px 0px rgba(100, 100, 100, .7); margin-left: 20px;"> Done
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <nav class="d-none d-lg-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <h4
+                        class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span style="color: #ACACAC;">Welcome back!</span> <a
+                            class="d-flex align-items-center text-muted" href="#"> </a> </h4>
+                    <!-- Icons taken from: https://feathericons.com -->
+                    <ul class="nav flex-column sidebar-nav-ul">
+                        <li class="nav-item"> <a class="nav-link" href="dashboard_enterprise.html"> <img
+                                    src="../../static/cdei/images/icons/ic_dashboard_normal.png"
+                                    style="height: 15px;" /> <span>Dashboard</span> </a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="purchase_data.html"> <img
+                                    src="../../static/cdei/images/icons/ic_money_normal.png"
+                                    style="height: 20px;" /></img> <span>Purchases Data</span> </a> </li>
+                        <li class="nav-item"> <a class="nav-link active" href="your_databank.html"> <img
+                                    src="../../static/cdei/images/icons/ic_datalog_active.png"
+                                    style="height: 20px;" /></img> <span>Your Databank</span><span
+                                    class="sr-only">(current)</span> </a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="analytics_tool.html"> <img
+                                    src="../../static/cdei/images/icons/ic_analysis_normal.png"
+                                    style="height: 25px;" /></img> <span>Analytics Tool</span> </a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="custom_tool.html"> <img
+                                    src="../../static/cdei/images/icons/ic_transfer_normal.png"
+                                    style="height: 25px;" /></img> <span>Custom Data</span> </a> </li>
+                    </ul>
+                    <div class="sidebar-bottom">
+                        <ul class="nav flex-column sidebar-nav-ul">
+                            <li class="nav-item"> <a class="nav-link" href="#"> <span data-feather="settings"
+                                        style="color: #999;"></span> Settings </a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="how_it_works.html"> <span
+                                        data-feather="help-circle" style="color: #999;"></span> How it works? </a> </li>
+                        </ul> <button type="button" class="btn btn-danger sidebar-signout"> <span
+                                data-feather="log-out"></span> Sign Out </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div> <!-- Bootstrap core JavaScript     ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>         feather.replace()     </script>
+    <script>         $('.DldLink').on('click', function () { $('#dldModal').css('display', 'block'); }); $('#doneBtn').on('click', function () { $('#dldModal').css('display', 'none'); });     </script>
+</body>
+
+</html>

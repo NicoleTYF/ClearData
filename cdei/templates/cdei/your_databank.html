@@ -20,6 +20,7 @@
 
     <!-- My own style sheets -->
     <link rel="stylesheet" href="./../../static/cdei/css/common.css">
+    <link rel="stylesheet" href="./../../static/cdei/css/dashboard.css">
     <link rel="stylesheet" href="./../../static/cdei/css/tablePage.css">
 
 </head>
@@ -47,121 +48,149 @@
 
     <div class="container-fluid">
         <div class="row">
-            <span class="col-md-9 col-lg-10 pt-3 px-4">
-                <div class="d-flex flex-md-nowrap align-items-center mb-3" style="margin: 20px 2% 20px 2%;">
-                    <img src="./../../static/cdei/images/icons/ic_datalog_active.png" style="height: 30px;" />
-                    <h2 class="main-title align-self-end">YOUR DATABANK</h2>
-                </div>
-            </span>
+            <main role="main" class="col-md-9 col-lg-9 ">
+                <div class="container">
 
-            <main role="main" id="dataTable">
-                <table class="w-100">
-                    <tr class='header'>
-                        <th id='from'>FROM</td>
-                        <th id='to'>TO</td>
-                        <th id='datatype'>DATA TYPE</td>
-                        <th id='cost'>TOTAL COST</td>
-                        <th id='datapoint'>DATA POINTS</td>
-                        <th id='ru'>RECOMMENED USE</td>
-                        <th id='purchase'>DOWNLOAD</td>
-                    </tr>
+                    <br><br>
 
-                    <!-- IMPORTANT: When importing database data into this table, 
-									  you can use a for loop to print the following HTML code after: 
-					  <tbody class= 'record' >
-							<td>    to            </td>
-							<td>    from          </td>
-							<td><b> data type </b></td>
-							<td>    cost          </td>
-							<td>    datapoint     </td>
-							<td>    ru            </td>
-							
-							<td><a id='DldLink' download='filename.csv'> .csv file
-									<img src="./../../static/cdei/images/icons/ic_download.png"></a>
-							</td>
-					  </tbody>
-					  -->
+                    <div class="row" style="margin: 0;">
+                        <span class="col-md-9 col-lg-10 pt-3 px-4">
+                            <div class="d-flex flex-md-nowrap align-items-center mb-3">
+                                <img src="./../../static/cdei/images/icons/ic_datalog_active.png"
+                                    style="height: 30px;" />
+                                <h2 class="main-title align-self-end">Your Databank</h1>
+                            </div>
+                        </span>
+                    </div>
 
-                    <!-- This are sample records, when importing data into the table, 
-						   remove these records  -->
-                    <tbody class='record'>
-                        <td>04-08-2016</td>
-                        <td>03-09-2020</td>
-                        <td><b>Location and Transaction Amount</b></td>
-                        <td>$2304</td>
-                        <td>1,253</td>
-                        <td>Marketing, potential business locations</td>
-                        <td><a class='DldLink' href='./../../static/cdei/sample_files/testfile.csv' download>
-                                .csv file <img src="./../../static/cdei/images/icons/ic_download.png"></a>
-                        </td>
-                    </tbody>
-                    <tbody class='record'>
-                        <td>04-08-2016</td>
-                        <td>03-09-2020</td>
-                        <td><b>Location Data</b></td>
-                        <td>$2304</td>
-                        <td>1,253</td>
-                        <td>Marketing</td>
-                        <td><a class='DldLink' href='./../../static/cdei/sample_files/testfile.csv' download>
-                                .csv file
-                                <img src="./../../static/cdei/images/icons/ic_download.png"></a>
-                        </td>
-                    </tbody>
-                    <tbody class='record'>
-                        <td>04-08-2016</td>
-                        <td>03-09-2020</td>
-                        <td><b>Bluetooth Connection</b></td>
-                        <td>$2304</td>
-                        <td>1,253</td>
-                        <td>Marketing, Machine Learning</td>
-                        <td><a class='DldLink' href='./../../static/cdei/sample_files/testfile.csv' download>
-                                .csv file
-                                <img src="./../../static/cdei/images/icons/ic_download.png"></a>
-                        </td>
-                    </tbody>
-                    <tbody class='record'>
-                        <td>04-08-2016</td>
-                        <td>03-09-2020</td>
-                        <td><b>Location and Transaction Amount</b></td>
-                        <td>$2304</td>
-                        <td>1,253</td>
-                        <td>Data Traffic Usage</td>
-                        <td><a class='DldLink' href='./../../static/cdei/sample_files/testfile.csv' download>
-                                .csv file
-                                <img src="./../../static/cdei/images/icons/ic_download.png"></a>
-                        </td>
-                    </tbody>
-                    <tbody class='record'>
-                        <td>04-08-2016</td>
-                        <td>03-09-2020</td>
-                        <td><b>Transaction Category</b></td>
-                        <td>$2304</td>
-                        <td>1,253</td>
-                        <td>Machine Learning</td>
-                        <td><a class='DldLink' href='./../../static/cdei/sample_files/testfile.csv' download>
-                                .csv file
-                                <img src="./../../static/cdei/images/icons/ic_download.png"></a>
-                        </td>
-                    </tbody>
+                    <br>
 
-                </table>
-
-                <div id="dldModal" class="modal">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h2><img src="./../../static/cdei/images/icons/ic_download.png" width="40" height="40" />
-                                &emsp;Download Successful</h2>
+                    <div class="row" style="margin: 1em;">
+                        <div class="col">
+                            <div class="dash-box dash-shadow dash-margin" style="padding: 2em;">
+                                Location Data
+                                <br>
+                                <br>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">From</th>
+                                            <th scope="col">To</th>
+                                            <th scope="col">Cost</th>
+                                            <th scope="col">No. Entries</th>
+                                            <th scope="col">Download</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">#21048</th>
+                                            <td>04-08-2016</td>
+                                            <td>03-09-2016</td>
+                                            <td>$2304</td>
+                                            <td>1,253</td>
+                                            <td>
+                                                <a href="#">
+                                                    <span data-feather="download" style="color: #999;"></span>
+                                                    csv
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">#21049</th>
+                                            <td>07-08-2016</td>
+                                            <td>09-09-2016</td>
+                                            <td>$2709</td>
+                                            <td>1,853</td>
+                                            <td>
+                                                <a href="#">
+                                                    <span data-feather="download" style="color: #999;"></span>
+                                                    csv
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">#21050</th>
+                                            <td>08-08-2016</td>
+                                            <td>09-09-2016</td>
+                                            <td>$1896</td>
+                                            <td>1,102</td>
+                                            <td>
+                                                <a href="#">
+                                                    <span data-feather="download" style="color: #999;"></span>
+                                                    csv
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                        <div class="modal-body">
-                            <br><br><br>
-                            <!-- TODO: Replace fileName with the chosen data type name -->
-                            <h4>fileName.csv</h4>
-                            <br><br><br>
-                            <button id="doneBtn" class="btn btn-success w-75"
-                                style="box-shadow: 0px 4px 0px 0px rgba(100, 100, 100, .7); margin-left: 20px;">
-                                Done
-                            </button>
+
+                    </div>
+
+                    <div class="row" style="margin: 1em;">
+                        <div class="col">
+                            <div class="dash-box dash-shadow dash-margin" style="padding: 2em;">
+                                Purchases Data
+                                <br>
+                                <br>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">From</th>
+                                            <th scope="col">To</th>
+                                            <th scope="col">Cost</th>
+                                            <th scope="col">No. Entries</th>
+                                            <th scope="col">Download</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">#21051</th>
+                                            <td>04-08-2016</td>
+                                            <td>03-09-2016</td>
+                                            <td>$2304</td>
+                                            <td>1,253</td>
+                                            <td>
+                                                <a href="#">
+                                                    <span data-feather="download" style="color: #999;"></span>
+                                                    csv
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">#21052</th>
+                                            <td>07-08-2016</td>
+                                            <td>09-09-2016</td>
+                                            <td>$2709</td>
+                                            <td>1,853</td>
+                                            <td>
+                                                <a href="#">
+                                                    <span data-feather="download" style="color: #999;"></span>
+                                                    csv
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">#21053</th>
+                                            <td>08-08-2016</td>
+                                            <td>09-09-2016</td>
+                                            <td>$1896</td>
+                                            <td>1,102</td>
+                                            <td>
+                                                <a href="#">
+                                                    <span data-feather="download" style="color: #999;"></span>
+                                                    csv
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </main>
@@ -204,13 +233,6 @@
                                 <span>Analytics Tool</span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="custom_tool.html">
-                                <img src="../../static/cdei/images/icons/ic_transfer_normal.png"
-                                    style="height: 25px;" /></img>
-                                <span>Custom Data</span>
-                            </a>
-                        </li>
                     </ul>
 
                     <div class="sidebar-bottom">
@@ -250,6 +272,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- Icons -->
+    <!-- See https://feathericons.com for more icons -->
     <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
     <script>
         feather.replace()
