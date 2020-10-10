@@ -9,6 +9,7 @@
 }
 
 body {
+    background-color: #5b6f9a;
 	margin-bottom:              60px;
 	background-image:    url("./../images/bg_web.png");
 	background-size:     cover;
@@ -20,6 +21,19 @@ body {
 	color:           white;
 	margin:          0 0.5em 0 0.5em;
 	text-decoration: none;
+}
+
+.dash-box {
+	width:            100%;
+	padding:          2em;
+	font-size:        large;
+	margin-top:      -13px;
+	border-radius:    5px;
+	background-color: #ffffff;
+}
+
+.dash-margin {
+	margin: 1em;
 }
 
 /*

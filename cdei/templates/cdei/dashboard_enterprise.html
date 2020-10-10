@@ -89,30 +89,24 @@
                                 </div>
                             </div>
 
-                            <div class="dash-box dash-shadow" style="z-index: 1; max-height: 170px; padding: 0;">
-                                <canvas class="my-4" id="scatter_summary"
-                                    style="margin: 0; padding: 0; z-index: 0; width:100%; height: 170px; "></canvas>
-                                <div class="container"
-                                    style="z-index: 2; position: absolute; margin-left: -3%; margin-top: -165px; width: 100%;">
+                            <div class="dash-box dash-shadow top-panel-div">
+                                <canvas class="my-4 top-panel-graph" id="scatter_summary"></canvas>
+                                <div class="container top-panel-container">
                                     <div class="row">
                                         <div class="col-sm">
-                                            <span class="row"
-                                                style="color: #4C66A7; font-size: 50px; text-align: center; display:block;">$9050</span>
-                                            <span class="row"
-                                                style="font-weight:bold; text-align: center; display:block;">AUD</span>
+                                            <span class="row top-panel-figure-value"
+                                                style="color: #4C66A7;">$9050</span>
+                                            <span class="row top-panel-figure-label">AUD</span>
                                         </div>
                                         <div class="col-sm">
-                                            <span class="row"
-                                                style="color: #D78E23; font-size: 50px; text-align: center; display:block;">90342</span>
-                                            <span class="row"
-                                                style="font-weight:bold; text-align: center; display:block;">Data points
+                                            <span class="row top-panel-figure-value"
+                                                style="color: #D78E23;">90342</span>
+                                            <span class="row top-panel-figure-label">Data points
                                                 Received</span>
                                         </div>
                                         <div class="col-sm">
-                                            <span class="row"
-                                                style="color: #E5AD26; font-size: 50px; text-align: center; display:block;">32</span>
-                                            <span class="row"
-                                                style="font-weight:bold; text-align: center; display:block;">Analytic
+                                            <span class="row top-panel-figure-value" style="color: #E5AD26;">32</span>
+                                            <span class="row top-panel-figure-label">Analytic
                                                 Reports Produced</span>
                                         </div>
                                     </div>

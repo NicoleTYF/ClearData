@@ -8,19 +8,6 @@
 	text-decoration: none;
 }
 
-.dash-box {
-	width:            100%;
-	padding:          2em;
-	font-size:        large;
-	margin-top:      -13px;
-	border-radius:    5px;
-	background-color: #ffffff;
-}
-
-.dash-margin {
-	margin: 1em;
-}
-
 .dash-info-text {
 	color:          dimgray;
 	font-size:      large;
@@ -49,6 +36,43 @@ h5.sub-title {
 
 .arrow {
 	color: #FFE88F;
+}
+
+/* 
+ * Top panel that spans the entire container width
+ */
+
+.top-panel-div {
+    z-index: 1; 
+    max-height: 170px; 
+    padding: 0;
+}
+
+.top-panel-graph {
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+    width:100%;
+    height: 170px;
+}
+
+.top-panel-container {
+    z-index: 2;
+    position: absolute;
+    margin-left: -3%;
+    margin-top: -165px; width: 100%;
+}
+
+.top-panel-figure-value {
+    font-size: 50px; 
+    text-align: center; 
+    display: block;
+}
+
+.top-panel-figure-label {
+    font-weight: bold; 
+    text-align: center; 
+    display: block;
 }
 
 /* 
