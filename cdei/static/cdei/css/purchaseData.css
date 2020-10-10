@@ -1,0 +1,7 @@
+/* 
+ * Style the center box
+ */
+
+.container .row .col .dash-box {
+    padding: 2em;
+}
