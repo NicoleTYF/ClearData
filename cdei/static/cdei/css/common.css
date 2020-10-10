@@ -36,6 +36,13 @@ body {
 	margin: 1em;
 }
 
+/* 
+* Style the image that sits to the right of main page title.
+*/
+.title-img {
+    height: 30px;
+}
+
 /*
  * Top Banner
  */
