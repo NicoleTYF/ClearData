@@ -25,6 +25,7 @@ body {
 .main-title {
 	color:           white;
 	margin:          -0.1em 0.5em 0 0.5em;
+	text-transform:  uppercase;
 	text-decoration: none;
 }
 

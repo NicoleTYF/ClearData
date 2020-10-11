@@ -65,10 +65,8 @@
 
                     <div class="row">
                         <div class="col">
-                            <div class="table-title dash-box dash-shadow dash-margin">
-                                Location Data
-                                <br>
-                                <br>
+                            <div class="dash-box dash-shadow dash-margin">
+                                <span class="table-title ">Location Data</span>
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
@@ -88,10 +86,10 @@
                                             <td>$2304</td>
                                             <td>1,253</td>
                                             <td>
-                                                <a href="#">
-                                                    <span data-feather="download" style="color: #999;"></span>
-                                                    csv
-                                                </a>
+                                                <button class="btn btn-success"><a href="#" style="color: white;">
+                                                    <span data-feather="download"></span>
+                                                    &nbsp;CSV file
+                                                </a></button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -101,10 +99,10 @@
                                             <td>$2709</td>
                                             <td>1,853</td>
                                             <td>
-                                                <a href="#">
-                                                    <span data-feather="download" style="color: #999;"></span>
-                                                    csv
-                                                </a>
+                                                <button class="btn btn-success"><a href="#" style="color: white;">
+                                                    <span data-feather="download"></span>
+                                                    &nbsp;CSV file
+                                                </a></button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -113,11 +111,11 @@
                                             <td>09-09-2016</td>
                                             <td>$1896</td>
                                             <td>1,102</td>
-                                            <td>
-                                                <a href="#">
-                                                    <span data-feather="download" style="color: #999;"></span>
-                                                    csv
-                                                </a>
+                                            <td>    
+												 <button class="btn btn-success"><a href="#" style="color: white;">
+                                                    <span data-feather="download"></span>
+                                                    &nbsp;CSV file
+                                                </a></button>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -130,10 +128,8 @@
                     <div class="row">
                         <div class="col">
                             <div class="dash-box dash-shadow dash-margin">
-                                Purchases Data
-                                <br>
-                                <br>
                                 <table class="table table-striped">
+									<span class="table-title">Purchase Data</span>
                                     <thead>
                                         <tr>
                                             <th id="idCol"    scope="col">ID</th>
@@ -152,10 +148,10 @@
                                             <td>$2304</td>
                                             <td>1,253</td>
                                             <td>
-                                                <a href="#">
-                                                    <span data-feather="download" style="color: #999;"></span>
-                                                    csv
-                                                </a>
+                                                <button class="btn btn-success"><a href="#" style="color: white;">
+                                                    <span data-feather="download"></span>
+                                                    &nbsp;CSV file
+                                                </a></button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -165,10 +161,10 @@
                                             <td>$2709</td>
                                             <td>1,853</td>
                                             <td>
-                                                <a href="#">
-                                                    <span data-feather="download" style="color: #999;"></span>
-                                                    csv
-                                                </a>
+                                                <button class="btn btn-success"><a href="#" style="color: white;">
+                                                    <span data-feather="download"></span>
+                                                    &nbsp;CSV file
+                                                </a></button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -178,10 +174,10 @@
                                             <td>$1896</td>
                                             <td>1,102</td>
                                             <td>
-                                                <a href="#">
-                                                    <span data-feather="download" style="color: #999;"></span>
-                                                    csv
-                                                </a>
+                                                <button class="btn btn-success"><a href="#" style="color: white;">
+                                                    <span data-feather="download"></span>
+                                                    &nbsp;CSV file
+                                                </a></button>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -191,6 +187,27 @@
 
                     </div>
                 </div>
+				
+				<div id="dldModal" class="modal"> 
+					<div class="modal-content">
+						<div class="modal-header">
+						  <h2><img src="./../../static/cdei/images/icons/ic_download.png" 
+							width="40" height="40" /> &emsp;Download Successful</h2>
+						</div>
+						<div class="modal-body">
+							<br><br><br>
+							<!-- TODO: Replace fileName with the chosen data type name -->
+							<h4>fileName.csv</h4>
+							<br><br><br>
+							<button id="doneBtn" class="btn btn-danger w-75" 
+									style="box-shadow: 0px 4px 0px 0px rgba(100, 100, 100, .7); margin-left: 20px; font-size: 20px;">
+								CLOSE
+							</button>
+						</div>
+					</div>
+				</div>
+            </main>
+				
             </main>
 
             <nav class="d-none d-lg-block bg-light sidebar">
@@ -277,7 +294,7 @@
     </script>
 
     <script>
-        $('.DldLink').on('click', function () {
+        $('td a').on('click', function () {
             $('#dldModal').css('display', 'block');
         });
 

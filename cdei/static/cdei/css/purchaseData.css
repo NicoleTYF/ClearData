@@ -5,3 +5,38 @@
 .container .row .col .dash-box {
     padding: 2em;
 }
+
+label {
+	font-weight:   bold;
+	border-bottom: 3px dotted #FCC14F;
+}
+
+input[type=date], .form-group select {
+	color:         black;
+	height:        50px;
+	border:        3px solid #eee;
+	font-size:     19px;
+	box-shadow:    0px 3px 8px 0px rgba(72, 72, 72, 0.2);
+	border-radius: 0px;
+}
+
+.datatypeDropdown {
+	height: 90px;
+}
+
+.form-group select {
+	height: 60%;
+}
+
+.purchase button {
+	box-shadow:    0 8px 0 0 rgba(235,203,0,0.4);	
+	font-weight:   bold;
+	border-radius: 0;
+}
+
+.purchase button:hover {
+	transform:  translateY(4px);
+	transition: 0.4s;
+	box-shadow: 0 0px 0 0 rgba(255,223,0,0.4);
+}
+
