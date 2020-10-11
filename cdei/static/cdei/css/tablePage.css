@@ -51,38 +51,33 @@ th{
 	text-align: left;
 }
 
-#from, #to{
+#fromCol, #toCol{
 	border-bottom: 6px solid black;
-	width: 9%;
-	max-width: 9%;
+	width: 12%;
+	max-width: 12%;
 }
 
-#datatype{
+#idCol{
 	border-bottom: 6px solid red;
-	width: 25%;
-	max-width: 25%;
 	font-weight: bold;
+	width: 14%;
+	max-width: 14%;
 }
 
-#cost{
+#costCol{
 	border-bottom: 6px solid gold;
-	width: 12%;
-	max-width: 12%;
-}
-
-#datapoint{
-	border-bottom: 6px solid deepskyblue;
-	width: 12%;
-	max-width: 12%;
-}
-
-#ru{
-	border-bottom: 6px solid grey;
 	width: 20%;
 	max-width: 20%;
 }
 
-#purchase{
+#entryCol{
+	border-bottom: 6px solid deepskyblue;
+	width: 20%;
+	max-width: 20%;
+}
+
+
+#otherCol{
 	border-bottom: 6px solid grey;
 }
 

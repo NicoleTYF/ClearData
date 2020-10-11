@@ -1,13 +1,6 @@
 /* 
  * Dash boxes
  */
-
-.date-title {
-	color:           #FFE88F;
-	font-size:       17px;
-	text-decoration: none;
-}
-
 .dash-info-text {
 	color:          dimgray;
 	font-size:      large;
@@ -36,6 +29,14 @@ h5.sub-title {
 
 .arrow {
 	color: #FFE88F;
+}
+
+.bottom-row {
+	margin-top: -40px;
+}
+
+#scatter_summary {
+	max-height: 160px;
 }
 
 /* 
