@@ -61,7 +61,8 @@ body {
 	right:      0;
 	bottom:     0;
 	z-index:    100; /* Sidebar is on top of other elements */
-	padding:    0;
+    padding:    0;
+    padding-top: 4em;
 	position:   fixed;
     margin-top: 0em;
 	box-shadow: -14px 4px 9px 0 rgba(0, 0, 0, .1);
@@ -74,6 +75,10 @@ body {
 	position:     sticky;
 	overflow-x:   hidden;
 	overflow-y:   auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+.sidebar-sticky h4 {
+    padding-bottom: 1em;
 }
 
 .sidebar .nav-link {
