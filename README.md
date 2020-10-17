@@ -1,4 +1,4 @@
-# ClearData-web# 💻 ClearData Web Application (Frontend branch)
+# 💻 ClearData Web Application (Frontend branch)
 
 &emsp; 🎯 **Purpose:** <br> 
 &emsp;&emsp;&emsp;For enterprises to buy customer's data for analysis. <br>
